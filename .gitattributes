@@ -1,0 +1,42 @@
+# Default for everything
+* text zos-working-tree-encoding=IBM-1047
+
+# Ensure .gitattributes is ASCII
+.gitattributes text zos-working-tree-encoding=ISO8859-1
+
+# ===============================
+# Mainframe source (EBCDIC - IBM-1047)
+# ===============================
+*.cbl  text zos-working-tree-encoding=IBM-1047
+*.cob  text zos-working-tree-encoding=IBM-1047
+*.cpy  text zos-working-tree-encoding=IBM-1047
+*.copy text zos-working-tree-encoding=IBM-1047
+*.jcl  text zos-working-tree-encoding=IBM-1047
+*.proc text zos-working-tree-encoding=IBM-1047
+*.rexx text zos-working-tree-encoding=IBM-1047
+*.asm  text zos-working-tree-encoding=IBM-1047
+*.pli  text zos-working-tree-encoding=IBM-1047
+*.bms  text zos-working-tree-encoding=IBM-1047
+*.mac  text zos-working-tree-encoding=IBM-1047
+*.bind text zos-working-tree-encoding=IBM-1047
+*.incl text zos-working-tree-encoding=IBM-1047
+*.sql  text zos-working-tree-encoding=IBM-1047
+
+# ===============================
+# Open systems / config (UTF-8)
+# ===============================
+*.json text working-tree-encoding=UTF-8
+*.xml  text working-tree-encoding=UTF-8
+*.yaml text working-tree-encoding=UTF-8
+*.yml  text working-tree-encoding=UTF-8
+*.txt  text working-tree-encoding=UTF-8
+*.sh   text working-tree-encoding=UTF-8
+*.properties text working-tree-encoding=UTF-8
+
+# ===============================
+# Binary (never modify)
+# ===============================
+*.load binary
+*.bin  binary
+*.exe  binary
+*.zip  binary
