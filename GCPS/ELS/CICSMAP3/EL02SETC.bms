@@ -1,0 +1,28 @@
+1EL02SET  X  XCF               X   Y                                            
+2EL02MAP 23 80                                                                  
+3MAPID2   1  1     8AN                                                          
+3         1 28    24AB        ENGLISH CONTRACT INQUIRY                          
+3DATE2    1 72     8AN                                                          
+3MENUID2  2 15    50AB                                                          
+3TIME2    2 72     8AN                                                          
+3HEAD1    4  1    79AN                                                          
+3HEAD2    5  1    79AN                                                          
+3HEAD3    6  1    79AN                                                          
+3DESCR1   8  1    79AN                                                          
+3DESCR2   9  1    79AN                                                          
+3DESCR3  10  1    79AN                                                          
+3DESCR4  11  1    79AN                                                          
+3DESCR5  12  1    79AN                                                          
+3DESCR6  13  1    79AN                                                          
+3DESCR7  14  1    79AN                                                          
+3DESCR8  15  1    79AN                                                          
+3DESCR9  16  1    79AN                                                          
+3DESCR10 17  1    79AN                                                          
+3DESCR11 18  1    79AN                                                          
+3DESCR12 19  1    79AN                                                          
+3DESCR13 20  1    79AN                                                          
+3DESCR14 21  1    79AN                                                          
+3DESCR15 22  1    79AN                                                          
+3        23  1    15AN        ENTER SELECTION                                   
+3        23 17     5AB        ====>                                             
+3SELECTN 23 23    57UN                                                          

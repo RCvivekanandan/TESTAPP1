@@ -1,0 +1,130 @@
+ELADIOPM DSECT                                                          00010000
+*********************************************************************** 00020000
+*                                                                       00030000
+*   THIS IS THE ENGLISH LANGUAGE I/O MODULE PARM AREA FOR ELIOPGM.      00040000
+*        IT CONTAINS:                                                   00050000
+*                 1. PARM FIELDS PASSED TO AND FROM THE I/O MODULE      00060000
+*                 2. RECORD AREA ADDRESS POINTER                        00070000
+*                                                                       00055   
+*********************************************************************** 00090000
+**********************************************************************          
+* -CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION---------------------      **35
+*   XXXXXX   02/26/86  DES   ADDED COPIED FROM HGADIOPM FOR ENG. LANG.          
+*    0001    03/08/86  DES   ADDED ALTERNATE INDEX DDNAME FOR ACCESS            
+*                                                                               
+*                                                                               
+*                                                                               
+*                                                                               
+*********************************************************************** 00120000
+*                                                                       00130000
+ELIODDNM DS    CL8                FILE NAME - DDNAME                            
+*                                                                       00242003
+ELIOKEY  DS    CL255              MAXIMUM VSAM KEY                      00260000
+*                                                                       00242003
+*                                                                       00141001
+ELIOACES DS    CL3                FILE ACCESS CODE                              
+*                                 READ TYPE OPERATIONS                          
+*                                   RD  = READ                          00190002
+*                                   SB  = START BROWSE                  00220002
+*                                   SBP = START BROWSE GET PREVIOUS     00220002
+*                                          RECORD                       00220002
+*                                   GB  = GENERIC START BROWSE          00180002
+*                                   GBP = GENERIC START BROWSE GET      00180002
+*                                          PREVIOUS RECORD              00220002
+*                                   RN  = READ NEXT                     00200002
+*                                   EB  = END BROWSE                    00170002
+*                                                                       00242003
+*                                 UPDATE TYPE OPERATIONS                        
+*                                   RU  = READ FOR UPDATE               00210002
+*                                   WU  = WRITE UPDATE (REWRITE)        00240002
+*                                   DLU = DELETE (AFTER READ            00161003
+*                                          FOR UPDATE)                  00162003
+*                                   ULK = UNLOCK A READ FOR UPDATE      00220002
+*                                         (NO UPDATE TAKES PLACE)       00242003
+*                                                                       00242003
+*                                 WRITE/DELETE TYPE OPERATIONS                  
+*                                   DL  = DELETE                        00160002
+*                                   DLM = GENERIC DELETE (USES KEY LEN) 00160002
+*                                   WR  = WRITE (ADD A RECORD)          00230002
+*                                   WDP = WRITE (ADD A RECORD BUT       00230002
+*                                         IF DUPLICATE EXITS THEN       00242003
+*                                         RETURN RECORD FOUND FOR       00242003
+*                                         TASK TO DO UPDATE             00242003
+ELIOQUAL DS    CL3                BROWSE QUALIFIER CODE                         
+*                                   BLANK = NULL                        00620000
+*                                   EQ  = EQUAL TO                      00630000
+*                                   GTE = GREATER THAN OR EQUAL         00640000
+*                                                                       00242003
+ELIOBKL  DS    H                  GENERIC BROWSE KEY LENGTH                     
+*                                   ##NOTE## LENGTH IS                  00670000
+*                                            REQUIRED WHEN STARTING     00680000
+*                                            A GENERIC BROWSE OR        00690000
+*                                            DOING A GENERIC DELETE.    00700002
+*                                                                       00242003
+ELIOMXRL DS    H                  MAXIMUM RECORD LENGTH.                00242003
+*                                   ##NOTE## THIS FIELD IS FILLED       00242003
+*                                   BY WHOMEVER OBTAINS THE GETMAIN     00242003
+*                                   AREA FOR THE RECORD.                00242003
+*                                                                       00242003
+*                                                                       00242003
+ELIORL   DS    H                  RECORD LENGTH                         00660000
+*                                   ##NOTE## RECORD LENGTH IS           00670000
+*                                            REQUIRED INPUT FROM        00680000
+*                                            CALLER WHEN:               00690000
+*                                            'WR' 'WU' OR 'WDP'         00700002
+*                                            FUNCTIONS ARE ADDING OR    00701002
+*                                            UPDATING A RECORD.         00701002
+*                                          * FOR 'RD' 'RU' 'SB' 'RN'            
+*                                            AND 'GB'  THE ACTUAL               
+*                                            RECORD LENGTH READ WILL            
+*                                            BE RETURNED TO THE                 
+*                                            CALLER.                    00710000
+*                                                                       00710000
+ELIOSTOR DS    CL1                                                              
+ELIORCAV EQU   C'M'               MOVE MODE                                     
+*                                 RECORD AREA ADDRESS IS AVAILABLE              
+*                                 FROM CALLER AND CAN BE FOUND IN               
+*                                 ELIORECA.                                     
+ELIOGETM EQU   C'P'               POINTER MODE                                  
+*                                 ELAIOPGM WILL OBTAIN RECORD AREA              
+*                                 AND RETURN ADDRESS AFTER READ,                
+*                                 READ FOR UPDATE, OR ANY BROWSE                
+*                                                                               
+ELGTMIND DS    CL1                INTERNALLY USED GETMAIN FLAGS                 
+ELIORC   DS    CL2                RETURN CODE                           00720000
+ELIOOK   EQU   C'00'                GOOD RETURN                         00730000
+ELIONFND EQU   C'01'                RECORD NOT FOUND                    00740000
+ELIOEOF  EQU   C'03'                END OF FILE -BROWSE                 00760000
+ELIOSKEY EQU   C'10'                FUNCTION COMPLETED NORMALLY,                
+*                                      HOWEVER, VSAM AIX LOGIC                  
+*                                      INDICATES ADDITIONAL RECORDS             
+*                                      WITH THE SAME SECONDARY KEY              
+*                                      ARE AVAILABLE                            
+ELIODADD EQU   C'12'                DUPLICATE KEY ON ADD BUT APPLICA-           
+*                                      TION LOGIC WANTS THE RECORD              
+*                                      FOUND FOR UPDATE PROCESSING              
+*                                                                       00770000
+ELIOMSG  DS    CL16               ERROR MESSAGE RETURNED                00780000
+*                                                                       00242003
+ELIOBKEY DS    CL255              WORK BROWSE KEY TO COVER                      
+*                                 CICS CONSIDERATIONS                   00242003
+*                                 FOR GENERIC BROWSES                   00242003
+*                                                                       00242003
+ELIORECA DS    F                  ADDRESS OF WHERE RECORD IS                    
+*                                 LOCATED......                         00800000
+*                                 IF ELIOSTOR = 'M' THIS AREA MUST      00800000
+*                                 BE FILLED FOR A READ TYPE             00800000
+*                                 OPERATION.                            00800000
+*                                                                       00242003
+*                                                                       00242003
+ELIOADUP DS    F                  ADDRESS OF WHERE RECORD IS                    
+*                                 LOCATED IF FOUND ON R/U               00800000
+*                                 DURING WDP ADD PROCESSING.            00800000
+*                                                                       00242003
+ELIORL2  DS    H                  LENGTH OF RECORD DURING WDP                   
+*                                                                       00242003
+ELIOBRID DS    H                  BROWSE REQUIST ID                             
+*                                                                       00242003
+ELIOALDD DS    CL8                ALTERNATE INDEX FILE NAME - DDNAME            
+*                                                                       00242003
+ELIOPRML EQU   *-ELADIOPM         LENGTH OF ELIOPARM W/A RECORD AREA    00840000

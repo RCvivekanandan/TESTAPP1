@@ -1,0 +1,222 @@
+GAGWSET  DFHMSD TYPE=MAP,LANG=COBOL,MODE=INOUT,CTRL=FREEKB,DATA=FIELD,T*00000100
+               IOAPFX=YES                                               00000200
+GAGWI01  DFHMDI SIZE=(24,80)                                            00000300
+         DFHMDF POS=(1,1),LENGTH=4,INITIAL='GAGW',ATTRB=(PROT,BRT)      00000400
+         DFHMDF POS=(1,15),LENGTH=40,                                  *00000500
+               INITIAL='ATB: GROUP WITH MULTIPLE SECTION NUMBERS',     *00000600
+               ATTRB=(PROT,BRT)                                         00000700
+         DFHMDF POS=(1,64),LENGTH=15,INITIAL='         0AGW00',        *00000800
+               ATTRB=(PROT,BRT)                                         00000810
+         DFHMDF POS=(2,5),LENGTH=70,                                   *00000900
+               INITIAL='----- KEY IN GRP#, NTWK SET ID, SECT#, EFF DATE*00001000
+                && CORP ENTITY CD -----',ATTRB=(PROT,BRT)               00001100
+         DFHMDF POS=(3,43),LENGTH=23,INITIAL='CHANGE FROM   CHANGE TO',*00001200
+               ATTRB=(PROT,BRT)                                         00001300
+         DFHMDF POS=(4,1),LENGTH=13,INITIAL='GROUP NUMBER:',           *00001400
+               ATTRB=(PROT,BRT)                                         00001500
+GRPNUM   DFHMDF POS=(4,15),LENGTH=09,ATTRB=(UNPROT,NORM,IC,FSET),      *00001600
+               INITIAL='_________'                                      00001700
+         DFHMDF POS=(4,25),LENGTH=1,ATTRB=(ASKIP)                       00001710
+         DFHMDF POS=(4,26),LENGTH=16,INITIAL=' NETWORK SET ID:',       *00001800
+               ATTRB=(PROT,BRT)                                         00001900
+NSIDFRM  DFHMDF POS=(4,43),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00002000
+               INITIAL='_____'                                          00002001
+         DFHMDF POS=(4,49),LENGTH=1,ATTRB=(ASKIP)                       00002010
+NSIDTO   DFHMDF POS=(4,57),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00002100
+               INITIAL='_____'                                          00002101
+         DFHMDF POS=(4,63),LENGTH=1,ATTRB=(ASKIP)                       00002110
+         DFHMDF POS=(4,67),LENGTH=04,INITIAL=' FR:',ATTRB=(PROT,BRT)    00002200
+FRL      DFHMDF POS=(4,72),LENGTH=2,ATTRB=(UNPROT,NORM,FSET),          *00002400
+               INITIAL='__'                                             00002410
+         DFHMDF POS=(4,75),LENGTH=1,ATTRB=(ASKIP)                       00002500
+         DFHMDF POS=(6,1),LENGTH=6,INITIAL='SECT #',ATTRB=(PROT,BRT)    00002600
+         DFHMDF POS=(6,17),LENGTH=31,                                  *00002700
+               INITIAL='ATB EFFECTIVE DATE:(MM/DD/YYYY)',ATTRB=(PROT,BR*00002800
+               T)                                                       00002900
+         DFHMDF POS=(6,54),LENGTH=16,INITIAL='CORP ENTITY CODE',ATTRB=(*00003000
+               PROT,BRT)                                                00003100
+         DFHMDF POS=(7,2),LENGTH=2,INITIAL='1:',ATTRB=(PROT,BRT)        00003200
+SECT01   DFHMDF POS=(7,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),           *00003300
+               INITIAL='_____'                                          00003310
+         DFHMDF POS=(7,11),LENGTH=1,ATTRB=(ASKIP)                       00003400
+         DFHMDF POS=(7,18),LENGTH=2,INITIAL='1:',ATTRB=(PROT,BRT)       00003500
+EFFDT01  DFHMDF POS=(7,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),         *00003600
+               INITIAL='__________'                                     00003610
+         DFHMDF POS=(7,32),LENGTH=1,ATTRB=(ASKIP)                       00003700
+         DFHMDF POS=(7,55),LENGTH=2,INITIAL='1:',ATTRB=(PROT,BRT)       00003800
+CRPCD01  DFHMDF POS=(7,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),          *00003900
+               INITIAL='___'                                            00003910
+         DFHMDF POS=(7,62),LENGTH=1,ATTRB=(ASKIP)                       00004000
+         DFHMDF POS=(8,2),LENGTH=2,INITIAL='2:',ATTRB=(PROT,BRT)        00004100
+SECT02   DFHMDF POS=(8,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),           *00004200
+               INITIAL='_____'                                          00004210
+         DFHMDF POS=(8,11),LENGTH=1,ATTRB=(ASKIP)                       00004300
+         DFHMDF POS=(8,18),LENGTH=2,INITIAL='2:',ATTRB=(PROT,BRT)       00004400
+EFFDT02  DFHMDF POS=(8,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),         *00004500
+               INITIAL='__________'                                     00004510
+         DFHMDF POS=(8,32),LENGTH=1,ATTRB=(ASKIP)                       00004600
+         DFHMDF POS=(8,55),LENGTH=2,INITIAL='2:',ATTRB=(PROT,BRT)       00004700
+CRPCD02  DFHMDF POS=(8,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),          *00004800
+               INITIAL='___'                                            00004810
+         DFHMDF POS=(8,62),LENGTH=1,ATTRB=(ASKIP)                       00004900
+         DFHMDF POS=(9,2),LENGTH=2,INITIAL='3:',ATTRB=(PROT,BRT)        00005000
+SECT03   DFHMDF POS=(9,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),           *00005100
+               INITIAL='_____'                                          00005110
+         DFHMDF POS=(9,11),LENGTH=1,ATTRB=(ASKIP)                       00005200
+         DFHMDF POS=(9,18),LENGTH=2,INITIAL='3:',ATTRB=(PROT,BRT)       00005300
+EFFDT03  DFHMDF POS=(9,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),         *00005400
+               INITIAL='__________'                                     00005410
+         DFHMDF POS=(9,32),LENGTH=1,ATTRB=(ASKIP)                       00005500
+         DFHMDF POS=(9,55),LENGTH=2,INITIAL='3:',ATTRB=(PROT,BRT)       00005600
+CRPCD03  DFHMDF POS=(9,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),          *00005700
+               INITIAL='___'                                            00005710
+         DFHMDF POS=(9,62),LENGTH=1,ATTRB=(ASKIP)                       00005800
+         DFHMDF POS=(10,2),LENGTH=2,INITIAL='4:',ATTRB=(PROT,BRT)       00005900
+SECT04   DFHMDF POS=(10,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00006000
+               INITIAL='_____'                                          00006010
+         DFHMDF POS=(10,11),LENGTH=1,ATTRB=(ASKIP)                      00006100
+         DFHMDF POS=(10,18),LENGTH=2,INITIAL='4:',ATTRB=(PROT,BRT)      00006200
+EFFDT04  DFHMDF POS=(10,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00006300
+               INITIAL='__________'                                     00006310
+         DFHMDF POS=(10,32),LENGTH=1,ATTRB=(ASKIP)                      00006400
+         DFHMDF POS=(10,55),LENGTH=2,INITIAL='4:',ATTRB=(PROT,BRT)      00006500
+CRPCD04  DFHMDF POS=(10,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00006600
+               INITIAL='___'                                            00006610
+         DFHMDF POS=(10,62),LENGTH=1,ATTRB=(ASKIP)                      00006700
+         DFHMDF POS=(11,2),LENGTH=2,INITIAL='5:',ATTRB=(PROT,BRT)       00006800
+SECT05   DFHMDF POS=(11,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00006900
+               INITIAL='_____'                                          00006910
+         DFHMDF POS=(11,11),LENGTH=1,ATTRB=(ASKIP)                      00007000
+         DFHMDF POS=(11,18),LENGTH=2,INITIAL='5:',ATTRB=(PROT,BRT)      00007100
+EFFDT05  DFHMDF POS=(11,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00007200
+               INITIAL='__________'                                     00007210
+         DFHMDF POS=(11,32),LENGTH=1,ATTRB=(ASKIP)                      00007300
+         DFHMDF POS=(11,55),LENGTH=2,INITIAL='5:',ATTRB=(PROT,BRT)      00007400
+CRPCD05  DFHMDF POS=(11,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00007500
+               INITIAL='___'                                            00007510
+         DFHMDF POS=(11,62),LENGTH=1,ATTRB=(ASKIP)                      00007600
+         DFHMDF POS=(12,2),LENGTH=2,INITIAL='6:',ATTRB=(PROT,BRT)       00007700
+SECT06   DFHMDF POS=(12,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00007800
+               INITIAL='_____'                                          00007810
+         DFHMDF POS=(12,11),LENGTH=1,ATTRB=(ASKIP)                      00007900
+         DFHMDF POS=(12,18),LENGTH=2,INITIAL='6:',ATTRB=(PROT,BRT)      00008000
+EFFDT06  DFHMDF POS=(12,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00008100
+               INITIAL='__________'                                     00008110
+         DFHMDF POS=(12,32),LENGTH=1,ATTRB=(ASKIP)                      00008200
+         DFHMDF POS=(12,55),LENGTH=2,INITIAL='6:',ATTRB=(PROT,BRT)      00008300
+CRPCD06  DFHMDF POS=(12,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00008400
+               INITIAL='___'                                            00008410
+         DFHMDF POS=(12,62),LENGTH=1,ATTRB=(ASKIP)                      00008500
+         DFHMDF POS=(13,2),LENGTH=2,INITIAL='7:',ATTRB=(PROT,BRT)       00008600
+SECT07   DFHMDF POS=(13,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00008700
+               INITIAL='_____'                                          00008710
+         DFHMDF POS=(13,11),LENGTH=1,ATTRB=(ASKIP)                      00008800
+         DFHMDF POS=(13,18),LENGTH=2,INITIAL='7:',ATTRB=(PROT,BRT)      00008900
+EFFDT07  DFHMDF POS=(13,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00009000
+               INITIAL='__________'                                     00009010
+         DFHMDF POS=(13,32),LENGTH=1,ATTRB=(ASKIP)                      00009100
+         DFHMDF POS=(13,55),LENGTH=2,INITIAL='7:',ATTRB=(PROT,BRT)      00009200
+CRPCD07  DFHMDF POS=(13,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00009300
+               INITIAL='___'                                            00009310
+         DFHMDF POS=(13,62),LENGTH=1,ATTRB=(ASKIP)                      00009400
+         DFHMDF POS=(14,2),LENGTH=2,INITIAL='8:',ATTRB=(PROT,BRT)       00009500
+SECT08   DFHMDF POS=(14,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00009600
+               INITIAL='_____'                                          00009610
+         DFHMDF POS=(14,11),LENGTH=1,ATTRB=(ASKIP)                      00009700
+         DFHMDF POS=(14,18),LENGTH=2,INITIAL='8:',ATTRB=(PROT,BRT)      00009800
+EFFDT08  DFHMDF POS=(14,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00009900
+               INITIAL='__________'                                     00009910
+         DFHMDF POS=(14,32),LENGTH=1,ATTRB=(ASKIP)                      00010000
+         DFHMDF POS=(14,55),LENGTH=2,INITIAL='8:',ATTRB=(PROT,BRT)      00010100
+CRPCD08  DFHMDF POS=(14,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00010200
+               INITIAL='___'                                            00010210
+         DFHMDF POS=(14,62),LENGTH=1,ATTRB=(ASKIP)                      00010300
+         DFHMDF POS=(15,2),LENGTH=2,INITIAL='9:',ATTRB=(PROT,BRT)       00010400
+SECT09   DFHMDF POS=(15,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00010500
+               INITIAL='_____'                                          00010510
+         DFHMDF POS=(15,11),LENGTH=1,ATTRB=(ASKIP)                      00010600
+         DFHMDF POS=(15,18),LENGTH=2,INITIAL='9:',ATTRB=(PROT,BRT)      00010700
+EFFDT09  DFHMDF POS=(15,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00010800
+               INITIAL='__________'                                     00010810
+         DFHMDF POS=(15,32),LENGTH=1,ATTRB=(ASKIP)                      00010900
+         DFHMDF POS=(15,55),LENGTH=2,INITIAL='9:',ATTRB=(PROT,BRT)      00011000
+CRPCD09  DFHMDF POS=(15,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00011100
+               INITIAL='___'                                            00011110
+         DFHMDF POS=(15,62),LENGTH=1,ATTRB=(ASKIP)                      00011200
+         DFHMDF POS=(16,1),LENGTH=3,INITIAL='10:',ATTRB=(PROT,BRT)      00011300
+SECT10   DFHMDF POS=(16,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00011400
+               INITIAL='_____'                                          00011410
+         DFHMDF POS=(16,11),LENGTH=1,ATTRB=(ASKIP)                      00011500
+         DFHMDF POS=(16,17),LENGTH=3,INITIAL='10:',ATTRB=(PROT,BRT)     00011600
+EFFDT10  DFHMDF POS=(16,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00011700
+               INITIAL='__________'                                     00011710
+         DFHMDF POS=(16,32),LENGTH=1,ATTRB=(ASKIP)                      00011800
+         DFHMDF POS=(16,54),LENGTH=3,INITIAL='10:',ATTRB=(PROT,BRT)     00011900
+CRPCD10  DFHMDF POS=(16,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00012000
+               INITIAL='___'                                            00012010
+         DFHMDF POS=(16,62),LENGTH=1,ATTRB=(ASKIP)                      00012100
+         DFHMDF POS=(17,1),LENGTH=3,INITIAL='11:',ATTRB=(PROT,BRT)      00012200
+SECT11   DFHMDF POS=(17,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00012300
+               INITIAL='_____'                                          00012310
+         DFHMDF POS=(17,11),LENGTH=1,ATTRB=(ASKIP)                      00012400
+         DFHMDF POS=(17,17),LENGTH=3,INITIAL='11:',ATTRB=(PROT,BRT)     00012500
+EFFDT11  DFHMDF POS=(17,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00012600
+               INITIAL='__________'                                     00012610
+         DFHMDF POS=(17,32),LENGTH=1,ATTRB=(ASKIP)                      00012700
+         DFHMDF POS=(17,54),LENGTH=3,INITIAL='11:',ATTRB=(PROT,BRT)     00012800
+CRPCD11  DFHMDF POS=(17,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00012900
+               INITIAL='___'                                            00012910
+         DFHMDF POS=(17,62),LENGTH=1,ATTRB=(ASKIP)                      00013000
+         DFHMDF POS=(18,1),LENGTH=3,INITIAL='12:',ATTRB=(PROT,BRT)      00013100
+SECT12   DFHMDF POS=(18,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00013200
+               INITIAL='_____'                                          00013210
+         DFHMDF POS=(18,11),LENGTH=1,ATTRB=(ASKIP)                      00013300
+         DFHMDF POS=(18,17),LENGTH=3,INITIAL='12:',ATTRB=(PROT,BRT)     00013400
+EFFDT12  DFHMDF POS=(18,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00013500
+               INITIAL='__________'                                     00013510
+         DFHMDF POS=(18,32),LENGTH=1,ATTRB=(ASKIP)                      00013600
+         DFHMDF POS=(18,54),LENGTH=3,INITIAL='12:',ATTRB=(PROT,BRT)     00013700
+CRPCD12  DFHMDF POS=(18,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00013800
+               INITIAL='___'                                            00013810
+         DFHMDF POS=(18,62),LENGTH=1,ATTRB=(ASKIP)                      00013900
+         DFHMDF POS=(19,1),LENGTH=3,INITIAL='13:',ATTRB=(PROT,BRT)      00014000
+SECT13   DFHMDF POS=(19,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00014100
+               INITIAL='_____'                                          00014110
+         DFHMDF POS=(19,11),LENGTH=1,ATTRB=(ASKIP)                      00014200
+         DFHMDF POS=(19,17),LENGTH=3,INITIAL='13:',ATTRB=(PROT,BRT)     00014300
+EFFDT13  DFHMDF POS=(19,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00014400
+               INITIAL='__________'                                     00014410
+         DFHMDF POS=(19,32),LENGTH=1,ATTRB=(ASKIP)                      00014500
+         DFHMDF POS=(19,54),LENGTH=3,INITIAL='13:',ATTRB=(PROT,BRT)     00014600
+CRPCD13  DFHMDF POS=(19,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00014700
+               INITIAL='___'                                            00014710
+         DFHMDF POS=(19,62),LENGTH=1,ATTRB=(ASKIP)                      00014800
+         DFHMDF POS=(20,1),LENGTH=3,INITIAL='14:',ATTRB=(PROT,BRT)      00014900
+SECT14   DFHMDF POS=(20,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00015000
+               INITIAL='_____'                                          00015010
+         DFHMDF POS=(20,11),LENGTH=1,ATTRB=(ASKIP)                      00015100
+         DFHMDF POS=(20,17),LENGTH=3,INITIAL='14:',ATTRB=(PROT,BRT)     00015200
+EFFDT14  DFHMDF POS=(20,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00015300
+               INITIAL='__________'                                     00015310
+         DFHMDF POS=(20,32),LENGTH=1,ATTRB=(ASKIP)                      00015400
+         DFHMDF POS=(20,54),LENGTH=3,INITIAL='14:',ATTRB=(PROT,BRT)     00015500
+CRPCD14  DFHMDF POS=(20,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00015600
+               INITIAL='___'                                            00015610
+         DFHMDF POS=(20,62),LENGTH=1,ATTRB=(ASKIP)                      00015700
+         DFHMDF POS=(21,1),LENGTH=3,INITIAL='15:',ATTRB=(PROT,BRT)      00015800
+SECT15   DFHMDF POS=(21,5),LENGTH=5,ATTRB=(UNPROT,NORM,FSET),          *00015900
+               INITIAL='_____'                                          00015910
+         DFHMDF POS=(21,11),LENGTH=1,ATTRB=(ASKIP)                      00016000
+         DFHMDF POS=(21,17),LENGTH=3,INITIAL='15:',ATTRB=(PROT,BRT)     00016100
+EFFDT15  DFHMDF POS=(21,21),LENGTH=10,ATTRB=(UNPROT,NORM,FSET),        *00016200
+               INITIAL='__________'                                     00016210
+         DFHMDF POS=(21,32),LENGTH=1,ATTRB=(ASKIP)                      00016300
+         DFHMDF POS=(21,54),LENGTH=3,INITIAL='15:',ATTRB=(PROT,BRT)     00016400
+CRPCD15  DFHMDF POS=(21,58),LENGTH=3,ATTRB=(UNPROT,NORM,FSET),         *00016500
+               INITIAL='___'                                            00016510
+         DFHMDF POS=(21,62),LENGTH=1,ATTRB=(ASKIP)                      00016600
+         DFHMDF POS=(23,15),LENGTH=41,ATTRB=(PROT,BRT),                *00016700
+               INITIAL='FUNCTIONS: PF9:CLEAR  PF10:SAVE && EXECUTE'     00016800
+G1MSG    DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00016900
+         DFHMSD TYPE=FINAL                                              00017000
+         END                                                            00017100

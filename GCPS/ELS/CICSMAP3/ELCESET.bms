@@ -1,0 +1,47 @@
+1ELCESET  X  XCF               X   Y                                            
+2ELCEI01 24 80                                                                  
+3EFUNC    1  1     4PN   X    ELCE                                              
+3ETITLE   1 23    36AN   X                                                      
+3         1 65    15AN        SCREEN # ELCE00                                   
+3         2 35      AN        CODE VALUES                                       
+3         3  1      AN        RECORD:                                           
+3ERPREX   3 11     8AN   X                                                      
+3ERNAME   3 21    50AN   X                                                      
+3         4  1      AN        ELEMENT:                                          
+3EEPREX   4 11     6AN   X                                                      
+3EENAME   5  4    75AN   X                                                      
+3         6  1      AN        FCN:                                              
+3EFCN     6  6     1UN  X                                                       
+3         6  8     1AN                                                          
+3         6 13      AN        CODE VALUE:                                       
+3ECODE    6 25    10UN   X                                                      
+3         6 36     1AN                                                          
+3         6 40      AN        CODE SEQ:                                         
+3ESEQ     6 50     2UN   X                                                      
+3         6 53     1AN                                                          
+3         7  4      AN        ENGLISH DESC.:                                    
+3ENAME    7 19    50UN   X                                                      
+3         7 70     1AN                                                          
+3         8  1      AN        DESCRIPTION:                                      
+3EDESR1   9  1    79UN                                                          
+3EDESR2  10  1    79UN                                                          
+3EDESR3  11  1    79UN                                                          
+3EDESR4  12  1    79UN                                                          
+3EDESR5  13  1    79UN                                                          
+3EDESR6  14  1    79UN                                                          
+3EDESR7  15  1    79UN                                                          
+3EDESR8  16  1    79UN                                                          
+3EDESR9  17  1    79UN                                                          
+3EDESR10 18  1    79UN                                                          
+3EDESR11 19  1    79UN                                                          
+3EDESR12 20  1    79UN                                                          
+3        21  1      AN        MAP FROM PREFIX:                                  
+3MFPREX  21 18     8UN                                                          
+3        21 27     1AN                                                          
+3        21 31      AN        CODE VALUE:                                       
+3MFVAL   21 43    10UN                                                          
+3        21 54     1AN                                                          
+3        22  1      AN        NM:                                               
+3MFNM    22  5    75UN                                                          
+3ELINE   23  1    78AN                                                          
+3EERRM   24  1    79PB                                                          

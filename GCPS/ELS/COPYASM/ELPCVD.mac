@@ -1,0 +1,33 @@
+**********************************************************************          
+*                    CODE VALUE FILE                                            
+*               ENGLISH LANGUAGE PROTOTYPE                                      
+*                                                                               
+*    COPY MEMBER NAME: ELPCVD                  LENGTH: 1024                     
+**********************************************************************          
+*                                                                               
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                         
+*   *-*         U P D A T E   H I S T O R Y         *-*                         
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                         
+*                                                                               
+*-CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION----------------------          
+*                                                                               
+*   XXXX    02/26/86  DES  ORIGINAL MODULE                                      
+*                                                                               
+*                                                                               
+**********************************************************************          
+CVELCDVL DS    0CL1024       ELEMENT-CODE-VALUE                                 
+CVKEYNAM DS    0CL23           CV-CODE-KEY                                      
+CVRECPRF DS    CL8                CV-RECORD-PREFIX                              
+CVELMTNO DS    PL3                CV-ELEMENT-NBR          S9(3)V99      CO      
+CVCODEVL DS    CL10               CV-CODE-VALUE                                 
+CVSEQNO  DS    CL2                CV-CODE-DESC-SEQ                              
+CVCODENM DS    CL50            CV-CODE-NAME                                     
+CVDELFLG DS    CL1             CV-DELETE-CODE-FLAG                              
+CVDELETE EQU   C'D'               CV-DELETE                                     
+CVNBRVAL DS    PL2             CV-NBR-VALUE-DESC-LINES    S9(3)         CO      
+CVVALENT DS    0CL79           CV-VALUE-DESC-LINE                               
+CVOCCURS DS    12CL79                                                           
+CVLENGTH EQU   *-CVELCDVL      LENGTH OF THE RECORD                     CO      
+CVFXRECL EQU   CVOCCURS-CVELCDVL  LENGTH OF THE FIXED PORTION           CO      
+CVVBRECL EQU   L'CVVALENT         LENGTH OF THE VARIABLE PORTION        CO      
+CVNOVARS EQU   ((CVLENGTH-CVFXRECL)/CVVBRECL)  MAX NUM OF OCCURS        CO      

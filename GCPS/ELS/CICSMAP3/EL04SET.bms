@@ -1,0 +1,40 @@
+1EL04SET  X  XCF               X   Y                                            
+2EL04MAP 24 80                                                                  
+3         1  1     7AN        EL04MAP                                           
+3         1 24    24AN        ENGLISH CONTRACT INQUIRY                          
+3DATE1    1 72     8AN                                                          
+3         2 15    49AN        SPECIAL PROVIDER CONSIDERATIONS - SELECT *        
+3                             OPTIONS                                           
+3TIME     2 72     8AN                                                          
+3         4  1     6AN        GROUP:                                            
+3GRPNM    4  9     6AN                                                          
+3         4 16     8AN        SECTION:                                          
+3SCTN     4 25     4AN                                                          
+3FRLVL    4 30    20AN                                                          
+3         4 52     5AN        FROM:                                             
+3FRMDT    4 58     8AN                                                          
+3         4 67     3AN        TO:                                               
+3TODT     4 71     8AN                                                          
+3         7  1    54AN        SELECT ONE OF THE OPTIONS BELOW TO DISPLA*        
+3                             Y INFORMATION                                     
+3         8  4     2AN        A)                                                
+3         8  8    59AN        TO DISPLAY A LIST OF MATCHING NAMES TO SE*        
+3                             LECT FROM, TYPE IN                                
+3         9  8    41AN        THE PROVIDER'S NAME (UP TO 10 CHARACTERS)         
+3        10  4     2AN        B)                                                
+3        10  8    63AN        IF THE PROVIDER NUMBER IS KNOWN, ENTER IT*        
+3                              IN THE SPACE PROVIDED                            
+3        11  4     2AN        C)                                                
+3        11  8    63AN        TO VIEW ALL VARIABLE LEVEL PROVIDERS FOR *        
+3                             THIS GROUP, ENTER <L>                             
+3        12  8    21AN        IN THE SPACE PROVIDED                             
+3        14  8    19AN        PROVIDER NAME   ==>                               
+3NAME    14 28    10UN  XX                                                      
+3        14 39     1AN                                                          
+3        16  8    19AN        PROVIDER NUMBER ==>                               
+3NMBR    16 28    10UN   X                                                      
+3        16 39     1AN                                                          
+3        18  8    48AN        <L> FOR LIST OF ALL PROVIDERS IN THE NETW*        
+3                             ORK ==>                                           
+3LIST    18 57     1UN   X                                                      
+3        18 59     1AN                                                          

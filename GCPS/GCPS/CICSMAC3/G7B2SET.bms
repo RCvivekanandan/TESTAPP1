@@ -1,0 +1,83 @@
+G7B2SET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+G7B2I01  DFHMDI SIZE=(24,80)                                            00003   
+S2FUNC   DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(ASKIP,NORM,FSET),INITIAL='X00004   
+               G7B2'                                                    00005   
+S2TITLE  DFHMDF LENGTH=0032,POS=(1,20),ATTRB=(ASKIP,NORM),INITIAL='BENEX00006   
+               FIT PROVISION TYPE B        '                            00007   
+         DFHMDF LENGTH=0008,POS=(1,65),ATTRB=(ASKIP,NORM),INITIAL='SCREX00008   
+               EN #'                                                    00009   
+S2SCRN   DFHMDF LENGTH=0006,POS=(1,74),ATTRB=(ASKIP,NORM,FSET),INITIAL=X00010   
+               '007B02'                                                 00011   
+         DFHMDF LENGTH=0004,POS=(2,1),ATTRB=(ASKIP,NORM),INITIAL='PLN:' 00012   
+S2PLNCD  DFHMDF LENGTH=3,POS=(2,6),ATTRB=(ASKIP,NORM,FSET)              00013   
+         DFHMDF LENGTH=0004,POS=(2,10),ATTRB=(ASKIP,NORM),INITIAL='GRP:X00014   
+               '                                                        00015   
+S2GRPNO  DFHMDF LENGTH=9,POS=(2,15),ATTRB=(ASKIP,NORM,FSET)             00016   
+         DFHMDF LENGTH=0004,POS=(2,26),ATTRB=(ASKIP,NORM),INITIAL='SEC:X00017   
+               '                                                        00018   
+S2SECNO  DFHMDF LENGTH=5,POS=(2,31),ATTRB=(ASKIP,NORM,FSET)             00019   
+         DFHMDF LENGTH=0004,POS=(2,37),ATTRB=(ASKIP,NORM),INITIAL='PKG:X00020   
+               '                                                        00021   
+S2PKGCD  DFHMDF LENGTH=3,POS=(2,42),ATTRB=(ASKIP,NORM,FSET)             00022   
+         DFHMDF LENGTH=0004,POS=(2,46),ATTRB=(ASKIP,NORM),INITIAL='LOB:X00023   
+               '                                                        00024   
+S2LOB    DFHMDF LENGTH=1,POS=(2,51),ATTRB=(ASKIP,NORM,FSET)             00025   
+         DFHMDF LENGTH=0004,POS=(2,53),ATTRB=(ASKIP,NORM),INITIAL='PRV:X00026   
+               '                                                        00027   
+S2PRV    DFHMDF LENGTH=2,POS=(2,58),ATTRB=(ASKIP,NORM,FSET)             00028   
+         DFHMDF LENGTH=0003,POS=(2,61),ATTRB=(ASKIP,NORM),INITIAL='FR:' 00029   
+S2FRL    DFHMDF LENGTH=2,POS=(2,65),ATTRB=(ASKIP,NORM,FSET)             00030   
+         DFHMDF LENGTH=0005,POS=(2,68),ATTRB=(ASKIP,NORM),INITIAL='EFDTX00031   
+               :'                                                       00032   
+S2EFFDT  DFHMDF LENGTH=6,POS=(2,74),ATTRB=(ASKIP,NORM,FSET)             00033   
+         DFHMDF LENGTH=0011,POS=(3,65),ATTRB=(ASKIP,NORM),INITIAL='PAGEX00034   
+                5 OF 5'                                                 00035   
+         DFHMDF LENGTH=0019,POS=(6,5),ATTRB=(ASKIP,NORM),INITIAL='PHYSIX00036   
+               CAL EXAM IND :'                                          00037   
+S2PHEXI  DFHMDF LENGTH=1,POS=(6,49),ATTRB=(UNPROT,NORM,IC,FSET)         00038   
+         DFHMDF LENGTH=1,POS=(6,51),ATTRB=(ASKIP,NORM)                  00039   
+         DFHMDF LENGTH=0041,POS=(8,5),ATTRB=(ASKIP,NORM),INITIAL='PROFEX00040   
+               SSIONAL CHARGES ON A HOSPITAL CLAIM:'                    00041   
+S2PCOHC  DFHMDF LENGTH=1,POS=(8,49),ATTRB=(UNPROT,NORM,FSET)            00042   
+         DFHMDF LENGTH=1,POS=(8,51),ATTRB=(ASKIP,NORM)                  00043   
+         DFHMDF LENGTH=0027,POS=(10,5),ATTRB=(ASKIP,NORM),INITIAL='AMBUX00044   
+               LANCE ELIGIBILITY IND :'                                 00045   
+S2AMBEI  DFHMDF LENGTH=2,POS=(10,49),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00046   
+               LEFT,BLANK)                                              00047   
+         DFHMDF LENGTH=1,POS=(10,52),ATTRB=(ASKIP,NORM)                 00048   
+         DFHMDF LENGTH=0007,POS=(10,60),ATTRB=(ASKIP,NORM),INITIAL='BPVX00049   
+               ID ='                                                    00050   
+S2BPVID  DFHMDF LENGTH=6,POS=(10,68),ATTRB=(ASKIP,NORM,FSET)            00051   
+S2SLOTH  DFHMDF LENGTH=0007,POS=(11,60),ATTRB=(ASKIP,DRK),INITIAL='SLOTX00052   
+               # ='                                                     00053   
+S2SLOT   DFHMDF LENGTH=7,POS=(11,68),ATTRB=(ASKIP,DRK,FSET)             00054   
+         DFHMDF LENGTH=0041,POS=(12,5),ATTRB=(ASKIP,NORM),INITIAL='ALCOX00055   
+               HOL ELIGIBLE MEMBER OVERRIDE IND :   '                   00056   
+S2AECOI  DFHMDF LENGTH=1,POS=(12,49),ATTRB=(UNPROT,NORM,FSET)           00057   
+         DFHMDF LENGTH=1,POS=(12,51),ATTRB=(ASKIP,NORM)                 00058   
+         DFHMDF LENGTH=0038,POS=(13,5),ATTRB=(ASKIP,NORM),INITIAL='DRUGX00059   
+                ELIGIBLE MEMBER OVERRIDE IND :   '                      00060   
+S2DECOI  DFHMDF LENGTH=1,POS=(13,49),ATTRB=(UNPROT,NORM,FSET)           00061   
+         DFHMDF LENGTH=1,POS=(13,51),ATTRB=(ASKIP,NORM)                 00062   
+         DFHMDF LENGTH=0028,POS=(14,5),ATTRB=(ASKIP,NORM),INITIAL='ECF/X00063   
+               SNF OVERRIDE INDICATOR :'                                00064   
+S2ESOVI  DFHMDF LENGTH=1,POS=(14,49),ATTRB=(UNPROT,NORM,FSET)           00065   
+         DFHMDF LENGTH=1,POS=(14,51),ATTRB=(ASKIP,NORM)                 00066   
+         DFHMDF LENGTH=0029,POS=(15,5),ATTRB=(ASKIP,NORM),INITIAL='NORMX00067   
+               AL NEWBORN OVERRIDE IND :'                               00068   
+S2NNOVI  DFHMDF LENGTH=1,POS=(15,49),ATTRB=(UNPROT,NORM,FSET)           00069   
+         DFHMDF LENGTH=1,POS=(15,51),ATTRB=(ASKIP,NORM)                 00070   
+         DFHMDF LENGTH=0041,POS=(16,5),ATTRB=(ASKIP,NORM),INITIAL='MAX X00071   
+               AMOUNT PER VISIT:                    '                   00072   
+S2MAXAT  DFHMDF LENGTH=6,POS=(16,49),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00073   
+               RIGHT,ZERO)                                              00074   
+         DFHMDF LENGTH=1,POS=(16,56),ATTRB=(ASKIP,NORM)                 00075   
+         DFHMDF LENGTH=0035,POS=(17,5),ATTRB=(ASKIP,NORM),INITIAL='TRANX00076   
+               S-SEXUAL RESTR. OVERRIDE IND : '                         00077   
+S2TXPRI  DFHMDF LENGTH=1,POS=(17,49),ATTRB=(UNPROT,NORM,FSET)           00078   
+         DFHMDF LENGTH=1,POS=(17,51),ATTRB=(PROT,NORM)                  00079   
+S2ERR    DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00080   
+         DFHMSD TYPE=FINAL                                              00081   
+         END                                                            00082   
+/*                                                                      00083   

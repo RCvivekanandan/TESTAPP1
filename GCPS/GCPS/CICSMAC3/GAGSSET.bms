@@ -1,0 +1,381 @@
+GAGSSET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+GAGSI01  DFHMDI SIZE=(24,80)                                            00003   
+FUNCTIN  DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(PROT,BRT,FSET),INITIAL='GAX00004   
+               GS'                                                      00005   
+         DFHMDF LENGTH=0037,POS=(1,19),ATTRB=(ASKIP,BRT),INITIAL='ATB MX00006   
+               ULTIPLE GROUP && SECTION NUMBERS'                        00007   
+         DFHMDF LENGTH=0002,POS=(10,01),ATTRB=(ASKIP,BRT),INITIAL='2:'  00061   
+         DFHMDF LENGTH=0002,POS=(11,01),ATTRB=(ASKIP,BRT),INITIAL='3:'  00061   
+         DFHMDF LENGTH=0002,POS=(12,01),ATTRB=(ASKIP,BRT),INITIAL='4:'  00061   
+         DFHMDF LENGTH=0002,POS=(13,01),ATTRB=(ASKIP,BRT),INITIAL='5:'  00061   
+         DFHMDF LENGTH=0002,POS=(14,01),ATTRB=(ASKIP,BRT),INITIAL='6:'  00061   
+         DFHMDF LENGTH=0002,POS=(15,01),ATTRB=(ASKIP,BRT),INITIAL='7:'  00061   
+         DFHMDF LENGTH=0002,POS=(16,01),ATTRB=(ASKIP,BRT),INITIAL='8:'  00061   
+         DFHMDF LENGTH=0002,POS=(17,01),ATTRB=(ASKIP,BRT),INITIAL='9:'  00061   
+         DFHMDF LENGTH=0003,POS=(18,01),ATTRB=(ASKIP,BRT),INITIAL='10:' 00061   
+         DFHMDF LENGTH=0003,POS=(19,01),ATTRB=(ASKIP,BRT),INITIAL='11:' 00061   
+SCRENNO  DFHMDF LENGTH=0006,POS=(1,72),ATTRB=(ASKIP,BRT,FSET),         X00010   
+               INITIAL='0AGS00'                                         00011   
+         DFHMDF LENGTH=0071,POS=(2,5),ATTRB=(ASKIP,BRT),INITIAL='-- KEYX00012   
+                IN THE GRP#, NTWK SET ID, SECT#, EFF DATE, CORP ENTITY X00013   
+               CD, FR --'                                                       
+         DFHMDF LENGTH=0027,POS=(05,18),ATTRB=(ASKIP,BRT),INITIAL='CHANX00026   
+               GE FROM       CHANGE TO'                                 00026   
+         DFHMDF LENGTH=0015,POS=(06,01),ATTRB=(ASKIP,BRT),INITIAL='NETWX00050   
+               ORK SET ID:'                                             00051   
+FROMSET  DFHMDF LENGTH=0005,POS=(06,21),ATTRB=(UNPROT,NORM,IC,FSET),   X00065   
+               JUSTIFY=(RIGHT),INITIAL='_____',                        X00066   
+               COLOR=GREEN,DSATTS=COLOR,MAPATTS=COLOR                           
+         DFHMDF POS=(6,27),LENGTH=1,ATTRB=(ASKIP)                       00002010
+TOSET    DFHMDF LENGTH=0005,POS=(06,38),ATTRB=(UNPROT,NORM,FSET),      X00065   
+               JUSTIFY=(RIGHT),INITIAL='_____',                        X00066   
+               COLOR=GREEN,DSATTS=COLOR,MAPATTS=COLOR                           
+         DFHMDF POS=(6,44),LENGTH=1,ATTRB=(ASKIP)                       00002010
+         DFHMDF LENGTH=0075,POS=(08,01),ATTRB=(ASKIP,BRT),INITIAL='    X00052   
+               GRP#           SECT#      ATB EFF DATE (MM/DD/YYYY)  CORX00053   
+               P ENTITY CD  FR'                                                 
+         DFHMDF LENGTH=0002,POS=(09,02),ATTRB=(ASKIP,BRT),INITIAL='1:'  00061   
+GROUP01  DFHMDF LENGTH=0009,POS=(09,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(9,15),LENGTH=1,ATTRB=(ASKIP)                       00002010
+         DFHMDF LENGTH=0002,POS=(09,17),ATTRB=(ASKIP,BRT),INITIAL='1:'  00063   
+SECT01   DFHMDF LENGTH=0005,POS=(09,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,DSATTS=COLOR,X00066   
+               MAPATTS=COLOR                                                    
+         DFHMDF POS=(9,26),LENGTH=1,ATTRB=(ASKIP)                       00002010
+         DFHMDF LENGTH=0002,POS=(09,28),ATTRB=(ASKIP,BRT),INITIAL='1:'  00063   
+EFFDT01  DFHMDF LENGTH=0010,POS=(09,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(9,42),LENGTH=1,ATTRB=(ASKIP)                       00002010
+         DFHMDF LENGTH=0002,POS=(09,55),ATTRB=(ASKIP,BRT),INITIAL='1:'  00063   
+CPNTY01  DFHMDF LENGTH=03,POS=(09,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(9,62),LENGTH=1,ATTRB=(ASKIP)                       00002010
+         DFHMDF LENGTH=0002,POS=(09,71),ATTRB=(ASKIP,BRT),INITIAL='1:'  00063   
+FMREL01  DFHMDF LENGTH=002,POS=(09,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               JUSTIFY=(LEFT),INITIAL='__',COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN01  DFHMDF LENGTH=0001,POS=(09,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(10,02),ATTRB=(ASKIP,BRT),INITIAL='2:'  00061   
+GROUP02  DFHMDF LENGTH=0009,POS=(10,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(10,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(10,17),ATTRB=(ASKIP,BRT),INITIAL='2:'  00063   
+SECT02   DFHMDF LENGTH=0005,POS=(10,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(10,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(10,28),ATTRB=(ASKIP,BRT),INITIAL='2:'  00063   
+EFFDT02  DFHMDF LENGTH=0010,POS=(10,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(10,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(10,55),ATTRB=(ASKIP,BRT),INITIAL='2:'  00063   
+CPNTY02  DFHMDF LENGTH=03,POS=(10,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(10,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(10,71),ATTRB=(ASKIP,BRT),INITIAL='2:'  00063   
+FMREL02  DFHMDF LENGTH=002,POS=(10,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN02  DFHMDF LENGTH=0001,POS=(10,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(11,02),ATTRB=(ASKIP,BRT),INITIAL='3:'  00061   
+GROUP03  DFHMDF LENGTH=0009,POS=(11,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(11,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(11,17),ATTRB=(ASKIP,BRT),INITIAL='3:'  00063   
+SECT03   DFHMDF LENGTH=0005,POS=(11,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(11,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(11,28),ATTRB=(ASKIP,BRT),INITIAL='3:'  00063   
+EFFDT03  DFHMDF LENGTH=0010,POS=(11,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(11,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(11,55),ATTRB=(ASKIP,BRT),INITIAL='3:'  00063   
+CPNTY03  DFHMDF LENGTH=03,POS=(11,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(11,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(11,71),ATTRB=(ASKIP,BRT),INITIAL='3:'  00063   
+FMREL03  DFHMDF LENGTH=002,POS=(11,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN03  DFHMDF LENGTH=0001,POS=(11,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(12,02),ATTRB=(ASKIP,BRT),INITIAL='4:'  00061   
+GROUP04  DFHMDF LENGTH=0009,POS=(12,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(12,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(12,17),ATTRB=(ASKIP,BRT),INITIAL='4:'  00063   
+SECT04   DFHMDF LENGTH=0005,POS=(12,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(12,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(12,28),ATTRB=(ASKIP,BRT),INITIAL='4:'  00063   
+EFFDT04  DFHMDF LENGTH=0010,POS=(12,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(12,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(12,55),ATTRB=(ASKIP,BRT),INITIAL='4:'  00063   
+CPNTY04  DFHMDF LENGTH=03,POS=(12,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(12,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(12,71),ATTRB=(ASKIP,BRT),INITIAL='4:'  00063   
+FMREL04  DFHMDF LENGTH=002,POS=(12,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN04  DFHMDF LENGTH=0001,POS=(12,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(13,02),ATTRB=(ASKIP,BRT),INITIAL='5:'  00061   
+GROUP05  DFHMDF LENGTH=0009,POS=(13,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(13,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(13,17),ATTRB=(ASKIP,BRT),INITIAL='5:'  00063   
+SECT05   DFHMDF LENGTH=0005,POS=(13,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(13,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(13,28),ATTRB=(ASKIP,BRT),INITIAL='5:'  00063   
+EFFDT05  DFHMDF LENGTH=0010,POS=(13,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(13,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(13,55),ATTRB=(ASKIP,BRT),INITIAL='5:'  00063   
+CPNTY05  DFHMDF LENGTH=03,POS=(13,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(13,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(13,71),ATTRB=(ASKIP,BRT),INITIAL='5:'  00063   
+FMREL05  DFHMDF LENGTH=002,POS=(13,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN05  DFHMDF LENGTH=0001,POS=(13,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(14,02),ATTRB=(ASKIP,BRT),INITIAL='6:'  00061   
+GROUP06  DFHMDF LENGTH=0009,POS=(14,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(14,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(14,17),ATTRB=(ASKIP,BRT),INITIAL='6:'  00063   
+SECT06   DFHMDF LENGTH=0005,POS=(14,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(14,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(14,28),ATTRB=(ASKIP,BRT),INITIAL='6:'  00063   
+EFFDT06  DFHMDF LENGTH=0010,POS=(14,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(14,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(14,55),ATTRB=(ASKIP,BRT),INITIAL='6:'  00063   
+CPNTY06  DFHMDF LENGTH=03,POS=(14,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(14,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(14,71),ATTRB=(ASKIP,BRT),INITIAL='6:'  00063   
+FMREL06  DFHMDF LENGTH=002,POS=(14,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN06  DFHMDF LENGTH=0001,POS=(14,77),ATYWB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(15,02),ATTRB=(ASKIP,BRT),INITIAL='7:'  00061   
+GROUP07  DFHMDF LENGTH=0009,POS=(15,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(15,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(15,17),ATTRB=(ASKIP,BRT),INITIAL='7:'  00063   
+SECT07   DFHMDF LENGTH=0005,POS=(15,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(15,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(15,28),ATTRB=(ASKIP,BRT),INITIAL='7:'  00063   
+EFFDT07  DFHMDF LENGTH=0010,POS=(15,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(15,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(15,55),ATTRB=(ASKIP,BRT),INITIAL='7:'  00063   
+CPNTY07  DFHMDF LENGTH=03,POS=(15,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(15,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(15,71),ATTRB=(ASKIP,BRT),INITIAL='7:'  00063   
+FMREL07  DFHMDF LENGTH=002,POS=(15,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN07  DFHMDF LENGTH=0001,POS=(15,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(16,02),ATTRB=(ASKIP,BRT),INITIAL='8:'  00061   
+GROUP08  DFHMDF LENGTH=0009,POS=(16,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(16,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(16,17),ATTRB=(ASKIP,BRT),INITIAL='8:'  00063   
+SECT08   DFHMDF LENGTH=0005,POS=(16,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(16,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(16,28),ATTRB=(ASKIP,BRT),INITIAL='8:'  00063   
+EFFDT08  DFHMDF LENGTH=0010,POS=(16,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(16,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(16,55),ATTRB=(ASKIP,BRT),INITIAL='8:'  00063   
+CPNTY08  DFHMDF LENGTH=03,POS=(16,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(16,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(16,71),ATTRB=(ASKIP,BRT),INITIAL='8:'  00063   
+FMREL08  DFHMDF LENGTH=002,POS=(16,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN08  DFHMDF LENGTH=0001,POS=(16,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0002,POS=(17,02),ATTRB=(ASKIP,BRT),INITIAL='9:'  00061   
+GROUP09  DFHMDF LENGTH=0009,POS=(17,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(17,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(17,17),ATTRB=(ASKIP,BRT),INITIAL='9:'  00063   
+SECT09   DFHMDF LENGTH=0005,POS=(17,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(17,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(17,28),ATTRB=(ASKIP,BRT),INITIAL='9:'  00063   
+EFFDT09  DFHMDF LENGTH=0010,POS=(17,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(17,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(17,55),ATTRB=(ASKIP,BRT),INITIAL='9:'  00063   
+CPNTY09  DFHMDF LENGTH=03,POS=(17,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(17,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0002,POS=(17,71),ATTRB=(ASKIP,BRT),INITIAL='9:'  00063   
+FMREL09  DFHMDF LENGTH=002,POS=(17,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN09  DFHMDF LENGTH=0001,POS=(17,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=003,POS=(18,01),ATTRB=(ASKIP,BRT),INITIAL='10:'  00061   
+GROUP10  DFHMDF LENGTH=0009,POS=(18,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(18,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(18,16),ATTRB=(ASKIP,BRT),INITIAL='10:'  00063   
+SECT10   DFHMDF LENGTH=0005,POS=(18,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(18,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(18,27),ATTRB=(ASKIP,BRT),INITIAL='10:'  00063   
+EFFDT10  DFHMDF LENGTH=0010,POS=(18,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(18,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(18,54),ATTRB=(ASKIP,BRT),INITIAL='10:'  00063   
+CPNTY10  DFHMDF LENGTH=03,POS=(18,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(18,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0003,POS=(18,70),ATTRB=(ASKIP,BRT),INITIAL='10:' 00063   
+FMREL10  DFHMDF LENGTH=002,POS=(18,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN10  DFHMDF LENGTH=0001,POS=(18,77),ATTRB=(DARK.ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=003,POS=(19,01),ATTRB=(ASKIP,BRT),INITIAL='11:'  00061   
+GROUP11  DFHMDF LENGTH=0009,POS=(19,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(19,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(19,16),ATTRB=(ASKIP,BRT),INITIAL='11:'  00063   
+SECT11   DFHMDF LENGTH=0005,POS=(19,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(19,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(19,27),ATTRB=(ASKIP,BRT),INITIAL='11:'  00063   
+EFFDT11  DFHMDF LENGTH=0010,POS=(19,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(19,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(19,54),ATTRB=(ASKIP,BRT),INITIAL='11:'  00063   
+CPNTY11  DFHMDF LENGTH=03,POS=(19,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(19,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0003,POS=(19,70),ATTRB=(ASKIP,BRT),INITIAL='11:' 00063   
+FMREL11  DFHMDF LENGTH=002,POS=(19,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN11  DFHMDF LENGTH=0001,POS=(19,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=003,POS=(20,01),ATTRB=(ASKIP,BRT),INITIAL='12:'  00061   
+GROUP12  DFHMDF LENGTH=0009,POS=(20,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(20,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(20,16),ATTRB=(ASKIP,BRT),INITIAL='12:'  00063   
+SECT12   DFHMDF LENGTH=0005,POS=(20,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(20,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(20,27),ATTRB=(ASKIP,BRT),INITIAL='12:'  00063   
+EFFDT12  DFHMDF LENGTH=0010,POS=(20,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(20,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(20,54),ATTRB=(ASKIP,BRT),INITIAL='12:'  00063   
+CPNTY12  DFHMDF LENGTH=03,POS=(20,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(20,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0003,POS=(20,70),ATTRB=(ASKIP,BRT),INITIAL='12:' 00063   
+FMREL12  DFHMDF LENGTH=002,POS=(20,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN12  DFHMDF LENGTH=0001,POS=(20,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=003,POS=(21,01),ATTRB=(ASKIP,BRT),INITIAL='13:'  00061   
+GROUP13  DFHMDF LENGTH=0009,POS=(21,05),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_________',COLOR=GREEN,         X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(21,15),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(21,16),ATTRB=(ASKIP,BRT),INITIAL='13:'  00063   
+SECT13   DFHMDF LENGTH=0005,POS=(21,20),ATTRB=(UNPROT,NORM,FSET),      X00062   
+               JUSTIFY=(LEFT),INITIAL='_____',COLOR=GREEN,             X00066   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(21,26),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(21,27),ATTRB=(ASKIP,BRT),INITIAL='13:'  00063   
+EFFDT13  DFHMDF LENGTH=0010,POS=(21,31),ATTRB=(UNPROT,NORM,FSET),      X00068   
+               JUSTIFY=(RIGHT),INITIAL='__________',COLOR=GREEN,       X00069   
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(21,42),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=003,POS=(21,54),ATTRB=(ASKIP,BRT),INITIAL='13:'  00063   
+CPNTY13  DFHMDF LENGTH=03,POS=(21,58),ATTRB=(UNPROT,NORM,FSET),        X00068   
+               JUSTIFY=(LEFT),INITIAL='___',COLOR=GREEN,               X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+         DFHMDF POS=(21,62),LENGTH=1,ATTRB=(ASKIP)                      00002010
+         DFHMDF LENGTH=0003,POS=(21,70),ATTRB=(ASKIP,BRT),INITIAL='13:' 00063   
+FMREL13  DFHMDF LENGTH=002,POS=(21,74),ATTRB=(UNPROT,NORM,FSET),       X00068   
+               INITIAL='__',JUSTIFY=(LEFT),COLOR=GREEN,                X        
+               DSATTS=COLOR,MAPATTS=COLOR                                       
+ERRLN13  DFHMDF LENGTH=0001,POS=(21,77),ATTRB=(DARK,ASKIP),            X00068   
+               INITIAL=' '                                                      
+         DFHMDF LENGTH=0046,POS=(23,15),ATTRB=(ASKIP,BRT),INITIAL='FUNCX00052   
+               TIONS: PF9: CLEAR   PF10: SAVE && EXECUTE'               00053   
+G1MSG    DFHMDF LENGTH=79,POS=(24,1),ATTRB=(ASKIP,BRT)                  00302   
+         DFHMSD TYPE=FINAL                                                      
+         END                                                            00304   
+/*                                                                      00305   

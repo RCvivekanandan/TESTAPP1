@@ -1,0 +1,57 @@
+1ELCCSET  X  XCF               X   Y                                            
+2ELCCI01 24 80                                                                  
+3CFUNC    1  1     4PN   X    ELCC                                              
+3CTITLE   1 21    36AN                                                          
+3         1 65    15AN        SCREEN # ELCC00                                   
+3         2 28      AN        DATA ELEMENT DEFINITION                           
+3         3  1      AN        RECORD:                                           
+3CRPREX   3 13     8AN                                                          
+3CRNAME   3 22    50AN                                                          
+3         4  1      AN        FCN                                               
+3         4  5      AN        ELEM NAME:                                        
+3         4 58      AN        ELEMENT NUMBER:                                   
+3CENUM    4 74     6PN   X                                                      
+3CFCN     5  1     1UN  XX                                                      
+3         5  3     1AN                                                          
+3CENAME   5  5    75UN   X                                                      
+3         6  1      AN        FORMAT:                                           
+3CFORM    6 13     2UN   X                                                      
+3         6 16      AN        (A/AN/DT/N)  LENGTH:                              
+3CLENGT   6 39     3UNX  X  XX999            ZZ9                                
+3         6 43      AN        FORMAT COMMENT:                                   
+3CFORCM   6 59    21UN   X                                                      
+3         7  1      AN        POSITION:                                         
+3CPOSIT   7 13     5UNX  X  XX9(5)           ZZZZ9                              
+3         7 19      AN        STORED LENGTH:                                    
+3CSTORL   7 34     3UNX  X  XX999            ZZ9                                
+3         7 38     1AN                                                          
+3         7 42      AN        DECIMALS:                                         
+3CDECIM   7 52     3UNX  X  XX999            ZZ9                                
+3         7 56      AN        STORED:                                           
+3CSTORE   7 64     1UN   X                                                      
+3         7 66      AN        (B/C/D/P/X)                                       
+3         8  1      AN        COBOL NAME:                                       
+3CCONAME  8 13    30UN   X                                                      
+3         8 44     1AN                                                          
+3         8 50      AN        BAL NAME:                                         
+3CBANAME  8 60     8UN   X                                                      
+3         8 69     1AN                                                          
+3         9  1      AN        DESCRIPTION:                                      
+3CDESR1  10  1    79UN   X                                                      
+3CDESR2  11  1    79UN   X                                                      
+3CDESR3  12  1    79UN   X                                                      
+3CDESR4  13  1    79UN   X                                                      
+3CDESR5  14  1    79UN   X                                                      
+3CDESR6  15  1    79UN   X                                                      
+3CDESR7  16  1    79UN   X                                                      
+3CDESR8  17  1    79UN   X                                                      
+3CDESR9  18  1    79UN   X                                                      
+3CDESR10 19  1    79UN   X                                                      
+3CDESR11 20  1    79UN   X                                                      
+3        21  1      AN        FROM PREFIX:                                      
+3CNWPREF 21 14     8UN   X                                                      
+3        21 23     1AN                                                          
+3        22  1      AN        NM:                                               
+3CNNAME  22  5    75UN   X                                                      
+3CMSG    23  1    79AN                                                          
+3CERRM   24  1    79PB                                                          

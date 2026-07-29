@@ -1,0 +1,24 @@
+******************************************************************              
+*         ENGLISH NAME CROSS REFERENCE FOR DATA ELEMENTS                        
+*                   ENGLISH LANGUAGE PROTOTYPE                                  
+*                                                                               
+*       COPY MEMBER NAME: ELPEND                    LENGTH: 87                  
+******************************************************************              
+*                                                                               
+*       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                     
+*       *-*         U P D A T E   H I S T O R Y         *-*                     
+*       *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                     
+*                                                                               
+**-CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION-----------------              
+*                                                                               
+*    XXXX    02/26/86  DES  ORIGINAL MODULE                                     
+*                                                                               
+******************************************************************              
+ENENGLNM DS    0CL87         EN-ENGLISH-ELMT-NAME                               
+ENKEYNAM DS    0CL83            EN-KEY                                          
+ENRECPRF DS    CL8                 EN-RECORD-PREFIX                             
+ENELMTNM DS    CL75                EN-ELEMENT-NAME                              
+ENELMTNO DS    PL3              EN-ELEMENT-NBR         S9(3)V99                 
+ENDELFLG DS    CL1              EN-DELETE-ELEMENT-FLAG                          
+ENDELETE EQU   C'D'                EN-DELETE                                    
+ENLENGTH EQU   *-ENENGLNM    LENGTH OF THE RECORD                               

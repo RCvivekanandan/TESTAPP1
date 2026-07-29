@@ -1,0 +1,70 @@
+GBIGSET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+GBIGI01  DFHMDI SIZE=(24,80)                                            00003   
+IGFUNCN  DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(PROT,NORM,FSET),INITIAL='GX00004   
+               BIG'                                                     00005   
+         DFHMDF LENGTH=0037,POS=(1,20),ATTRB=(ASKIP,NORM),INITIAL='BENEX00006   
+               FITS HIGHLIGHTS SUBSCRIBER SEARCH'                       00007   
+IGSCRN   DFHMDF LENGTH=0015,POS=(1,65),ATTRB=(ASKIP,NORM,FSET),INITIAL=X00008   
+               'SCREEN # GBIG00'                                        00009   
+IGSVDT   DFHMDF LENGTH=7,POS=(2,1),ATTRB=(PROT,DRK,FSET),JUSTIFY=(RIGHTX00010   
+               ,ZERO)                                                   00011   
+         DFHMDF LENGTH=0017,POS=(6,1),ATTRB=(ASKIP,BRT),INITIAL='SUBCRIX00012   
+               BER NUMBER:'                                             00013   
+IGSUBN   DFHMDF LENGTH=9,POS=(6,19),ATTRB=(UNPROT,BRT,FSET),JUSTIFY=(RIX00014   
+               GHT,ZERO)                                                00015   
+         DFHMDF LENGTH=1,POS=(6,29),ATTRB=(ASKIP,NORM)                  00016   
+         DFHMDF LENGTH=0013,POS=(8,1),ATTRB=(ASKIP,BRT),INITIAL='GROUP X00017   
+               NUMBER:'                                                 00018   
+IGGRPX   DFHMDF LENGTH=9,POS=(8,19),ATTRB=(UNPROT,BRT,FSET),JUSTIFY=(RIX00019   
+               GHT,ZERO)                                                00020   
+         DFHMDF LENGTH=1,POS=(8,29),ATTRB=(ASKIP,NORM)                  00021   
+         DFHMDF LENGTH=0031,POS=(10,1),ATTRB=(ASKIP,NORM),INITIAL='PRIMX00022   
+               ARY SUBSCRIBER INFORMATION:'                             00023   
+         DFHMDF LENGTH=0009,POS=(12,1),ATTRB=(ASKIP,NORM),INITIAL='LASTX00024   
+                NAME'                                                   00025   
+         DFHMDF LENGTH=0008,POS=(12,19),ATTRB=(ASKIP,NORM),INITIAL='1STX00026   
+                NAME'                                                   00027   
+         DFHMDF LENGTH=0006,POS=(12,31),ATTRB=(ASKIP,NORM),INITIAL='SUBX00028   
+                NO'                                                     00029   
+         DFHMDF LENGTH=0008,POS=(12,43),ATTRB=(ASKIP,NORM),INITIAL='GROX00030   
+               UP NO'                                                   00031   
+         DFHMDF LENGTH=0007,POS=(12,55),ATTRB=(ASKIP,NORM),INITIAL='SECX00032   
+               TION'                                                    00033   
+         DFHMDF LENGTH=0010,POS=(12,65),ATTRB=(ASKIP,NORM),INITIAL='ORIX00034   
+               G EFFDT'                                                 00035   
+IGLNAM   DFHMDF LENGTH=15,POS=(13,1),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(LEX00036   
+               FT,ZERO)                                                 00037   
+IGFNAM   DFHMDF LENGTH=9,POS=(13,19),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00038   
+               GHT,ZERO)                                                00039   
+IGSUBP   DFHMDF LENGTH=9,POS=(13,30),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00040   
+               GHT,ZERO)                                                00041   
+IGGRPN   DFHMDF LENGTH=6,POS=(13,44),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00042   
+               GHT,ZERO)                                                00043   
+IGSECT   DFHMDF LENGTH=5,POS=(13,56),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00044   
+               GHT,ZERO)                                                00045   
+IGEFMM   DFHMDF LENGTH=2,POS=(13,64),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00046   
+               GHT,ZERO)                                                00047   
+         DFHMDF LENGTH=0001,POS=(13,67),ATTRB=(ASKIP,BRT),INITIAL='/'   00048   
+IGEFDD   DFHMDF LENGTH=2,POS=(13,69),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00049   
+               GHT,ZERO)                                                00050   
+         DFHMDF LENGTH=0001,POS=(13,72),ATTRB=(ASKIP,BRT),INITIAL='/'   00051   
+IGEFYY   DFHMDF LENGTH=2,POS=(13,74),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00052   
+               GHT,ZERO)                                                00053   
+         DFHMDF LENGTH=0012,POS=(16,1),ATTRB=(ASKIP,BRT),INITIAL='CANCEX00054   
+               L DATE:'                                                 00055   
+IGTRMM   DFHMDF LENGTH=2,POS=(16,15),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00056   
+               GHT,ZERO)                                                00057   
+         DFHMDF LENGTH=0001,POS=(16,18),ATTRB=(ASKIP,BRT),INITIAL='/'   00058   
+IGTRDD   DFHMDF LENGTH=2,POS=(16,20),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00059   
+               GHT,ZERO)                                                00060   
+         DFHMDF LENGTH=0001,POS=(16,23),ATTRB=(ASKIP,BRT),INITIAL='/'   00061   
+IGTRYY   DFHMDF LENGTH=2,POS=(16,25),ATTRB=(ASKIP,BRT,FSET),JUSTIFY=(RIX00062   
+               GHT,ZERO)                                                00063   
+         DFHMDF LENGTH=0040,POS=(20,19),ATTRB=(ASKIP,NORM),INITIAL='PF1X00064   
+                (CLEAR FIELDS)   PF3 (MAIN MENU)    '                   00065   
+IGERMSG  DFHMDF LENGTH=79,POS=(23,1),ATTRB=(ASKIP,BRT)                  00066   
+IGERLN2  DFHMDF LENGTH=79,POS=(24,1),ATTRB=(ASKIP,BRT)                  00067   
+         DFHMSD TYPE=FINAL                                              00068   
+         END                                                            00069   
+/*                                                                      00070   

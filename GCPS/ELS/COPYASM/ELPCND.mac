@@ -1,0 +1,25 @@
+**********************************************************************          
+*      COBOL NAME CROSS REFERENCE FOR DATA ELEMENTS                             
+*               ENGLISH LANGUAGE PROTOTYPE                                      
+*                                                                               
+*    COPY MEMBER NAME: ELPCND                     LENGTH: 42                    
+**********************************************************************          
+*                                                                               
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                         
+*   *-*         U P D A T E   H I S T O R Y         *-*                         
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                         
+*                                                                               
+*-CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION----------------------          
+*                                                                               
+*   XXXX    02/26/86  DES  ORIGINAL MODULE                                      
+*                                                                               
+*                                                                               
+**********************************************************************          
+CNSYSNAM DS    0CL42         CN-COBOL-ELMT-NAME                                 
+CNKEYNAM DS    0CL38            CN-KEY                                          
+CNRECPRF DS    CL8                 CN-RECORD-PREFIX                             
+CNCOBLNM DS    CL30                CN-COBOL-NAME                                
+CNELMTNO DS    PL3              CN-ELEMENT-NBR       S9(3)V99                   
+CNDELFLG DS    CL1              CN-DELETE-ELEMENT-FLAG                          
+CNDELETE EQU   C'D'                CN-DELETE                                    
+CNLENGTH EQU   *-CNSYSNAM    LENGTH OF THE RECORD                               

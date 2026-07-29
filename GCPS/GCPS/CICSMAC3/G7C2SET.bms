@@ -1,0 +1,142 @@
+G7C2SET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+G7C2I01  DFHMDI SIZE=(24,80)                                            00003   
+S2FUNC   DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(ASKIP,NORM,FSET),INITIAL='X00004   
+               G7C2'                                                    00005   
+S2TITLE  DFHMDF LENGTH=0032,POS=(1,20),ATTRB=(ASKIP,NORM),INITIAL='BENEX00006   
+               FIT PROVISION TYPE C        '                            00007   
+         DFHMDF LENGTH=0008,POS=(1,65),ATTRB=(ASKIP,NORM),INITIAL='SCREX00008   
+               EN #'                                                    00009   
+S2SCRN   DFHMDF LENGTH=0006,POS=(1,74),ATTRB=(ASKIP,NORM,FSET),INITIAL=X00010   
+               '007C02'                                                 00011   
+         DFHMDF LENGTH=0004,POS=(2,1),ATTRB=(ASKIP,NORM),INITIAL='PLN:' 00012   
+S2PLNCD  DFHMDF LENGTH=3,POS=(2,6),ATTRB=(ASKIP,NORM,FSET)              00013   
+         DFHMDF LENGTH=0004,POS=(2,10),ATTRB=(ASKIP,NORM),INITIAL='GRP:X00014   
+               '                                                        00015   
+S2GRPNO  DFHMDF LENGTH=9,POS=(2,15),ATTRB=(ASKIP,NORM,FSET)             00016   
+         DFHMDF LENGTH=0004,POS=(2,26),ATTRB=(ASKIP,NORM),INITIAL='SEC:X00017   
+               '                                                        00018   
+S2SECNO  DFHMDF LENGTH=5,POS=(2,31),ATTRB=(ASKIP,NORM,FSET)             00019   
+         DFHMDF LENGTH=0004,POS=(2,37),ATTRB=(ASKIP,NORM),INITIAL='PKG:X00020   
+               '                                                        00021   
+S2PKGCD  DFHMDF LENGTH=3,POS=(2,42),ATTRB=(ASKIP,NORM,FSET)             00022   
+         DFHMDF LENGTH=0004,POS=(2,46),ATTRB=(ASKIP,NORM),INITIAL='LOB:X00023   
+               '                                                        00024   
+S2LOB    DFHMDF LENGTH=1,POS=(2,51),ATTRB=(ASKIP,NORM,FSET)             00025   
+         DFHMDF LENGTH=0004,POS=(2,53),ATTRB=(ASKIP,NORM),INITIAL='PRV:X00026   
+               '                                                        00027   
+S2PRV    DFHMDF LENGTH=2,POS=(2,58),ATTRB=(ASKIP,NORM,FSET)             00028   
+         DFHMDF LENGTH=0003,POS=(2,61),ATTRB=(ASKIP,NORM),INITIAL='FR:' 00029   
+S2FRL    DFHMDF LENGTH=2,POS=(2,65),ATTRB=(ASKIP,NORM,FSET)             00030   
+         DFHMDF LENGTH=0005,POS=(2,68),ATTRB=(ASKIP,NORM),INITIAL='EFDTX00031   
+               :'                                                       00032   
+S2EFFDT  DFHMDF LENGTH=6,POS=(2,74),ATTRB=(ASKIP,NORM,FSET)             00033   
+         DFHMDF LENGTH=0011,POS=(3,65),ATTRB=(ASKIP,NORM),INITIAL='PAGEX00034   
+                5 OF 5'                                                 00035   
+         DFHMDF LENGTH=0007,POS=(4,01),ATTRB=(ASKIP,NORM),INITIAL='BPVIX00036   
+               D ='                                                     00037   
+S2BPVID  DFHMDF LENGTH=6,POS=(4,10),ATTRB=(ASKIP,NORM,FSET)             00038   
+S2SLOTH  DFHMDF LENGTH=0007,POS=(4,20),ATTRB=(ASKIP,DRK),INITIAL='SLOT#X00039   
+                ='                                                      00040   
+S2SLOT   DFHMDF LENGTH=7,POS=(4,30),ATTRB=(ASKIP,DRK,FSET)              00041   
+         DFHMDF LENGTH=0004,POS=(6,49),ATTRB=(ASKIP,NORM),INITIAL='LVL1X00042   
+               '                                                        00043   
+         DFHMDF LENGTH=0004,POS=(6,58),ATTRB=(ASKIP,NORM),INITIAL='LVL2X00044   
+               '                                                        00045   
+         DFHMDF LENGTH=0004,POS=(6,67),ATTRB=(ASKIP,NORM),INITIAL='LVL3X00046   
+               '                                                        00047   
+         DFHMDF LENGTH=0004,POS=(6,76),ATTRB=(ASKIP,NORM),INITIAL='LVL4X00048   
+               '                                                        00049   
+         DFHMDF LENGTH=0045,POS=(7,1),ATTRB=(ASKIP,NORM),INITIAL='MULTIX00050   
+               PLE UNRELATED PROCEDURE LEVEL PERCENT : '                00051   
+S2UPLP1  DFHMDF LENGTH=6,POS=(7,47),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00052   
+               IGHT,ZERO)                                               00053   
+         DFHMDF LENGTH=1,POS=(7,54),ATTRB=(ASKIP,NORM)                  00054   
+S2UPLP2  DFHMDF LENGTH=6,POS=(7,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00055   
+               IGHT,ZERO)                                               00056   
+         DFHMDF LENGTH=1,POS=(7,63),ATTRB=(ASKIP,NORM)                  00057   
+S2UPLP3  DFHMDF LENGTH=6,POS=(7,65),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00058   
+               IGHT,ZERO)                                               00059   
+         DFHMDF LENGTH=1,POS=(7,72),ATTRB=(ASKIP,NORM)                  00060   
+         DFHMDF LENGTH=0046,POS=(8,1),ATTRB=(ASKIP,NORM),INITIAL='MULTIX00061   
+               PLE UNRELATED NUMBER OF OCCURRANCES   :  '               00062   
+S2UNOC1  DFHMDF LENGTH=1,POS=(8,52),ATTRB=(UNPROT,NORM,FSET)            00063   
+         DFHMDF LENGTH=1,POS=(8,54),ATTRB=(ASKIP,NORM)                  00064   
+S2UNOC2  DFHMDF LENGTH=1,POS=(8,61),ATTRB=(UNPROT,NORM,FSET)            00065   
+         DFHMDF LENGTH=1,POS=(8,63),ATTRB=(ASKIP,NORM)                  00066   
+S2UNOC3  DFHMDF LENGTH=1,POS=(8,70),ATTRB=(UNPROT,NORM,FSET)            00067   
+         DFHMDF LENGTH=1,POS=(8,72),ATTRB=(ASKIP,NORM)                  00068   
+         DFHMDF LENGTH=0045,POS=(10,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00069   
+               IPLE RELATED PROCEDURE LEVEL PERCENT   : '               00070   
+S2RPLP1  DFHMDF LENGTH=6,POS=(10,47),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00071   
+               RIGHT,ZERO)                                              00072   
+         DFHMDF LENGTH=1,POS=(10,54),ATTRB=(ASKIP,NORM)                 00073   
+S2RPLP2  DFHMDF LENGTH=6,POS=(10,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00074   
+               RIGHT,ZERO)                                              00075   
+         DFHMDF LENGTH=1,POS=(10,63),ATTRB=(ASKIP,NORM)                 00076   
+S2RPLP3  DFHMDF LENGTH=6,POS=(10,65),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00077   
+               RIGHT,ZERO)                                              00078   
+         DFHMDF LENGTH=1,POS=(10,72),ATTRB=(ASKIP,NORM)                 00079   
+         DFHMDF LENGTH=0045,POS=(11,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00080   
+               IPLE RELATED NUMBER OF OCCURRANCES     : '               00081   
+S2RNOC1  DFHMDF LENGTH=1,POS=(11,52),ATTRB=(UNPROT,NORM,FSET)           00082   
+         DFHMDF LENGTH=1,POS=(11,54),ATTRB=(ASKIP,NORM)                 00083   
+S2RNOC2  DFHMDF LENGTH=1,POS=(11,61),ATTRB=(UNPROT,NORM,FSET)           00084   
+         DFHMDF LENGTH=1,POS=(11,63),ATTRB=(ASKIP,NORM)                 00085   
+S2RNOC3  DFHMDF LENGTH=1,POS=(11,70),ATTRB=(UNPROT,NORM,FSET)           00086   
+         DFHMDF LENGTH=1,POS=(11,72),ATTRB=(ASKIP,NORM)                 00087   
+         DFHMDF LENGTH=0045,POS=(13,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00088   
+               IPLE INJURY PROCEDURE LEVEL PERCENT    : '               00089   
+S2IPLP1  DFHMDF LENGTH=6,POS=(13,47),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00090   
+               RIGHT,ZERO)                                              00091   
+         DFHMDF LENGTH=1,POS=(13,54),ATTRB=(ASKIP,NORM)                 00092   
+S2IPLP2  DFHMDF LENGTH=6,POS=(13,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00093   
+               RIGHT,ZERO)                                              00094   
+         DFHMDF LENGTH=1,POS=(13,63),ATTRB=(ASKIP,NORM)                 00095   
+S2IPLP3  DFHMDF LENGTH=6,POS=(13,65),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00096   
+               RIGHT,ZERO)                                              00097   
+         DFHMDF LENGTH=1,POS=(13,72),ATTRB=(ASKIP,NORM)                 00098   
+         DFHMDF LENGTH=0045,POS=(14,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00099   
+               IPLE INJURY NUMBER OF OCCURRANCES      : '               00100   
+S2INOC1  DFHMDF LENGTH=1,POS=(14,52),ATTRB=(UNPROT,NORM,FSET)           00101   
+         DFHMDF LENGTH=1,POS=(14,54),ATTRB=(ASKIP,NORM)                 00102   
+S2INOC2  DFHMDF LENGTH=1,POS=(14,61),ATTRB=(UNPROT,NORM,FSET)           00103   
+         DFHMDF LENGTH=1,POS=(14,63),ATTRB=(ASKIP,NORM)                 00104   
+S2INOC3  DFHMDF LENGTH=1,POS=(14,70),ATTRB=(UNPROT,NORM,FSET)           00105   
+         DFHMDF LENGTH=1,POS=(14,72),ATTRB=(ASKIP,NORM)                 00106   
+         DFHMDF LENGTH=0045,POS=(16,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00107   
+               IPLE PODIATRY PROCEDURE LEVEL PERCENT  : '               00108   
+S2PPLP1  DFHMDF LENGTH=6,POS=(16,47),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00109   
+               RIGHT,ZERO)                                              00110   
+         DFHMDF LENGTH=1,POS=(16,54),ATTRB=(ASKIP,NORM)                 00111   
+S2PPLP2  DFHMDF LENGTH=6,POS=(16,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00112   
+               RIGHT,ZERO)                                              00113   
+         DFHMDF LENGTH=1,POS=(16,63),ATTRB=(ASKIP,NORM)                 00114   
+S2PPLP3  DFHMDF LENGTH=6,POS=(16,65),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00115   
+               RIGHT,ZERO)                                              00116   
+         DFHMDF LENGTH=1,POS=(16,72),ATTRB=(ASKIP,NORM)                 00117   
+S2PPLP4  DFHMDF LENGTH=6,POS=(16,74),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00118   
+               RIGHT,ZERO)                                              00119   
+         DFHMDF LENGTH=0045,POS=(17,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00120   
+               IPLE PODIATRY NUMBER OF OCCURRANCES    : '               00121   
+S2PNOC1  DFHMDF LENGTH=1,POS=(17,52),ATTRB=(UNPROT,NORM,FSET)           00122   
+         DFHMDF LENGTH=1,POS=(17,54),ATTRB=(ASKIP,NORM)                 00123   
+S2PNOC2  DFHMDF LENGTH=1,POS=(17,61),ATTRB=(UNPROT,NORM,FSET)           00124   
+         DFHMDF LENGTH=1,POS=(17,63),ATTRB=(ASKIP,NORM)                 00125   
+S2PNOC3  DFHMDF LENGTH=1,POS=(17,70),ATTRB=(UNPROT,NORM,FSET)           00126   
+         DFHMDF LENGTH=1,POS=(17,72),ATTRB=(ASKIP,NORM)                 00127   
+S2PNOC4  DFHMDF LENGTH=1,POS=(17,79),ATTRB=(UNPROT,NORM,FSET)           00128   
+         DFHMDF LENGTH=1,POS=(18,1),ATTRB=(ASKIP,NORM)                  00129   
+         DFHMDF LENGTH=0045,POS=(19,1),ATTRB=(ASKIP,NORM),INITIAL='MULTX00130   
+               IPLE PODIATRY PROCEDURE PRICING IND    : '               00131   
+S2MPPPI  DFHMDF LENGTH=1,POS=(19,52),ATTRB=(UNPROT,NORM,FSET)           00132   
+         DFHMDF LENGTH=1,POS=(19,54),ATTRB=(ASKIP,NORM)                 00133   
+         DFHMDF LENGTH=0045,POS=(21,1),ATTRB=(ASKIP,NORM),INITIAL='PRIMX00134   
+               ARY SURGEON DEPENDENCY PAYMENT PERCENT : '               00135   
+S2PSDPP  DFHMDF LENGTH=3,POS=(21,50),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00136   
+               RIGHT,ZERO)                                              00137   
+         DFHMDF LENGTH=1,POS=(21,54),ATTRB=(PROT,NORM)                  00138   
+S2ERR    DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00139   
+         DFHMSD TYPE=FINAL                                              00140   
+         END                                                            00141   
+/*                                                                      00142   

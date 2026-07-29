@@ -1,0 +1,77 @@
+1ELBSSET  X  XCF               X   Y                                            
+2ELBSI01 24 80                                                                  
+3BSFUNCN  1  1     4PN   X    ELBS                                              
+3         1 33    16AN        BLUESTORM SYSTEM                                  
+3         1 65     8AN        SCREEN #                                          
+3BSSCRN   1 74     6AN   X    ELBS00                                            
+3         2 24    33AN        BLUESTORM / PMCI INTERFACE SCREEN                 
+3         4  1    43AN        ENTER WHAT WILL BE RECEIVED FROM BLUESTOR*        
+3                             M:                                                
+3         6  1     9AN        PLAN CODE                                         
+3         6 15     5AN        GROUP                                             
+3         6 24     7AN        SECTION                                           
+3         6 33     8AN        PKG CODE                                          
+3         6 45    10AN        SUBSCRIBER                                        
+3BSPLAN   7  4     3UN  XXRZ  ___                                               
+3         7  8     1AN                                                          
+3BSGRP    7 13     9UN   XRZ  _________                                         
+3         7 23     1AN                                                          
+3BSSEC    7 25     5UN   XRZ  _____                                             
+3         7 31     1AN                                                          
+3BSPKG    7 35     3UN   XRZ  ___                                               
+3         7 39     1AN                                                          
+3BSSUB    7 45    16UN   XRZ  ________________                                  
+3         7 62     1AN                                                          
+3         9  1     8AN        BIRTH DT                                          
+3         9 11     7AN        PAT REL                                           
+3         9 20     8AN        MED ELIG                                          
+3         9 30     9AN        SERV DATE                                         
+3         9 41     8AN        PROV IND                                          
+3         9 51    10AN        IN/OUT PAT                                        
+3         9 63    13AN        ADS PROG TYPE                                     
+3BSBDATE 10  1     8UN   XRZ  ________                                          
+3        10 10     1AN                                                          
+3BSPTREL 10 15     1UN   XLB  _                                                 
+3        10 17     1AN                                                          
+3BSMED   10 23     1UN   XLB  _                                                 
+3        10 25     1AN                                                          
+3BSSERV  10 30     8UN   XRZ  ________                                          
+3        10 39     1AN                                                          
+3BSPROV  10 44     1UN   XLB  _                                                 
+3        10 46     1AN                                                          
+3BSINOUT 10 54     1UN   XLB  _                                                 
+3        10 56     1AN                                                          
+3BSADS   10 67     2UN   XLB  __                                                
+3        10 70     1AN                                                          
+3        12  1    35AN        DISPLAY WHAT IS RETURNED FROM PMCI:               
+3        13  3    13AN        IND DEDUCT IN                                     
+3        13 35    14AN        IND DEDUCT OUT                                    
+3BSDEDII 14  3    25UN   XLB                                                    
+3        14 29     1AN                                                          
+3BSDEDOI 14 35    25UN   XLB                                                    
+3        14 61     1AN                                                          
+3        15  3    13AN        FAM DEDUCT IN                                     
+3        15 35    14AN        FAM DEDUCT OUT                                    
+3BSDEDIF 16  3    25UN   XLB                                                    
+3        16 29     1AN                                                          
+3BSDEDOF 16 35    25UN   XLB                                                    
+3        16 61     1AN                                                          
+3        17  3    14AN        COINSURANCE IN                                    
+3        17 35    15AN        COINSURANCE OUT                                   
+3BSCOII  18  3    25UN   XLB                                                    
+3        18 29     1AN                                                          
+3BSCOIO  18 35    25UN   XLB                                                    
+3        18 61     1AN                                                          
+3        19  3    15AN        LIFETIME MAX IN                                   
+3        19 35    16AN        LIFETIME MAX OUT                                  
+3BSLIFEI 20  3    25UN   XLB                                                    
+3        20 29     1AN                                                          
+3BSLIFEO 20 35    25UN   XLB                                                    
+3        20 61     1AN                                                          
+3        21  3    16AN        OUT OF POCKET IN                                  
+3        21 35    17AN        OUT OF POCKET OUT                                 
+3BSOOPI  22  3    15UN   XLB                                                    
+3        22 29     1AN                                                          
+3BSOOPO  22 35    15UN   XLB                                                    
+3        22 61     1AN                                                          
+3BSERMSG 24  1    79AB                                                          

@@ -1,0 +1,61 @@
+GBIDSET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+GBIDI01  DFHMDI SIZE=(24,80)                                            00003   
+FUNCTON  DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(PROT,NORM,FSET),INITIAL='GX00004   
+               BID'                                                     00005   
+TTLELNE  DFHMDF LENGTH=0018,POS=(1,31),ATTRB=(ASKIP,BRT,NUM),INITIAL='BX00006   
+               ENEFIT HIGHLIGHTS'                                       00007   
+         DFHMDF LENGTH=0006,POS=(1,59),ATTRB=(ASKIP,NORM),INITIAL='PAGEX00008   
+               : '                                                      00009   
+CPAGE    DFHMDF LENGTH=1,POS=(1,66),ATTRB=(ASKIP,BRT,NUM,FSET),JUSTIFY=X00010   
+               (RIGHT,ZERO)                                             00011   
+         DFHMDF LENGTH=0002,POS=(1,70),ATTRB=(ASKIP,NORM),INITIAL='OF'  00012   
+TPAGE    DFHMDF LENGTH=1,POS=(1,73),ATTRB=(ASKIP,BRT,NUM,FSET),JUSTIFY=X00013   
+               (RIGHT,ZERO)                                             00014   
+         DFHMDF LENGTH=0006,POS=(2,1),ATTRB=(ASKIP,NORM),INITIAL='GROUPX00015   
+               :'                                                       00016   
+GROUP    DFHMDF LENGTH=9,POS=(2,8),ATTRB=(ASKIP,NORM,FSET)              00017   
+         DFHMDF LENGTH=0008,POS=(2,18),ATTRB=(ASKIP,NORM),INITIAL='SECTX00018   
+               ION:'                                                    00019   
+SECTN    DFHMDF LENGTH=5,POS=(2,27),ATTRB=(ASKIP,NORM,FSET)             00020   
+         DFHMDF LENGTH=0014,POS=(2,36),ATTRB=(ASKIP,NORM),INITIAL='SUBSX00021   
+               CRIBER ID:'                                              00022   
+SUBID    DFHMDF LENGTH=12,POS=(2,51),ATTRB=(ASKIP,NORM,FSET)            00023   
+         DFHMDF LENGTH=0005,POS=(2,67),ATTRB=(ASKIP,NORM),INITIAL='EFDTX00024   
+               :'                                                       00025   
+EFFDT    DFHMDF LENGTH=6,POS=(2,73),ATTRB=(ASKIP,NORM,FSET)             00026   
+         DFHMDF LENGTH=0009,POS=(3,1),ATTRB=(ASKIP,NORM),INITIAL='PROGRX00027   
+               AM: '                                                    00028   
+PRGRAM   DFHMDF LENGTH=30,POS=(3,11),ATTRB=(ASKIP,NORM,FSET)            00029   
+         DFHMDF LENGTH=0002,POS=(3,49),ATTRB=(ASKIP,NORM),INITIAL='IN'  00030   
+         DFHMDF LENGTH=0006,POS=(3,58),ATTRB=(ASKIP,NORM),INITIAL='OUT X00031   
+               OF'                                                      00032   
+         DFHMDF LENGTH=0007,POS=(4,47),ATTRB=(ASKIP,NORM),INITIAL='NETWX00033   
+               ORK'                                                     00034   
+         DFHMDF LENGTH=0007,POS=(4,58),ATTRB=(ASKIP,NORM),INITIAL='NETWX00035   
+               ORK'                                                     00036   
+         DFHMDF LENGTH=0007,POS=(4,70),ATTRB=(ASKIP,NORM),INITIAL='OVERX00037   
+               ALL'                                                     00038   
+DETLN1   DFHMDF LENGTH=79,POS=(5,1),ATTRB=(ASKIP,NORM,FSET)             00039   
+DETLN2   DFHMDF LENGTH=79,POS=(6,1),ATTRB=(ASKIP,NORM,FSET)             00040   
+DETLN3   DFHMDF LENGTH=79,POS=(7,1),ATTRB=(ASKIP,NORM,FSET)             00041   
+DETLN4   DFHMDF LENGTH=79,POS=(8,1),ATTRB=(ASKIP,NORM,FSET)             00042   
+DETLN5   DFHMDF LENGTH=79,POS=(9,1),ATTRB=(ASKIP,NORM,FSET)             00043   
+DETLN6   DFHMDF LENGTH=79,POS=(10,1),ATTRB=(ASKIP,NORM,FSET)            00044   
+DETLN7   DFHMDF LENGTH=79,POS=(11,1),ATTRB=(ASKIP,NORM,FSET)            00045   
+DETLN8   DFHMDF LENGTH=79,POS=(12,1),ATTRB=(ASKIP,NORM,FSET)            00046   
+DETLN9   DFHMDF LENGTH=79,POS=(13,1),ATTRB=(ASKIP,NORM,FSET)            00047   
+DETLN10  DFHMDF LENGTH=79,POS=(14,1),ATTRB=(ASKIP,NORM,FSET)            00048   
+DETLN11  DFHMDF LENGTH=79,POS=(15,1),ATTRB=(ASKIP,NORM,FSET)            00049   
+DETLN12  DFHMDF LENGTH=79,POS=(16,1),ATTRB=(ASKIP,NORM,FSET)            00050   
+DETLN13  DFHMDF LENGTH=79,POS=(17,1),ATTRB=(ASKIP,NORM,FSET)            00051   
+DETLN14  DFHMDF LENGTH=79,POS=(18,1),ATTRB=(ASKIP,NORM,FSET)            00052   
+DETLN15  DFHMDF LENGTH=79,POS=(19,1),ATTRB=(ASKIP,NORM,FSET)            00053   
+DETLN16  DFHMDF LENGTH=79,POS=(20,1),ATTRB=(ASKIP,NORM,FSET)            00054   
+DETLN17  DFHMDF LENGTH=79,POS=(21,1),ATTRB=(ASKIP,NORM,FSET)            00055   
+DETLN18  DFHMDF LENGTH=79,POS=(22,1),ATTRB=(ASKIP,NORM,FSET)            00056   
+DETLN19  DFHMDF LENGTH=79,POS=(23,1),ATTRB=(ASKIP,NORM,FSET)            00057   
+ERRMSG   DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00058   
+         DFHMSD TYPE=FINAL                                              00059   
+         END                                                            00060   
+/*                                                                      00061   

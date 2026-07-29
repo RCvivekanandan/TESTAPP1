@@ -1,0 +1,245 @@
+GBIBSET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+GBIBI01  DFHMDI SIZE=(24,80)                                            00003   
+IBFUNC   DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(PROT,NORM,FSET),INITIAL='GX00004   
+               BIB'                                                     00005   
+         DFHMDF LENGTH=0036,POS=(1,21),ATTRB=(ASKIP,BRT),INITIAL='BENEFX00006   
+               IT HIGHLIGHTS - SELECT CONTRACT'                         00007   
+         DFHMDF LENGTH=0012,POS=(1,61),ATTRB=(ASKIP,NORM),INITIAL='INQ X00008   
+               SCREEN #'                                                00009   
+IBSCRID  DFHMDF LENGTH=0006,POS=(1,74),ATTRB=(ASKIP,NORM,FSET),INITIAL=X00010   
+               '00IB0I'                                                 00011   
+         DFHMDF LENGTH=0021,POS=(2,1),ATTRB=(ASKIP,DRK),INITIAL='GBIBPGX00012   
+               M WORK FIELDS->'                                         00013   
+IBLNCNT  DFHMDF LENGTH=0002,POS=(2,23),ATTRB=(PROT,DRK,FSET),INITIAL='0X00014   
+               0'                                                       00015   
+IBGROUP  DFHMDF LENGTH=0009,POS=(2,40),ATTRB=(PROT,DRK,FSET),INITIAL='0X00016   
+               00000000'                                                00017   
+IBSEC    DFHMDF LENGTH=0005,POS=(2,50),ATTRB=(PROT,DRK,FSET),INITIAL='0X00018   
+               0000'                                                    00019   
+IBPNAME  DFHMDF LENGTH=5,POS=(2,66),ATTRB=(ASKIP,NORM)                  00020   
+IBPAGE   DFHMDF LENGTH=3,POS=(2,76),ATTRB=(ASKIP,BRT,FSET)              00021   
+IBSUB    DFHMDF LENGTH=9,POS=(3,1),ATTRB=(PROT,DRK,FSET)                00022   
+IBSVDT   DFHMDF LENGTH=0007,POS=(3,12),ATTRB=(PROT,DRK,FSET),INITIAL='0X00023   
+               000000'                                                  00024   
+IBRETC   DFHMDF LENGTH=2,POS=(3,21),ATTRB=(PROT,DRK,FSET)               00025   
+         DFHMDF LENGTH=0005,POS=(4,1),ATTRB=(ASKIP,BRT),INITIAL='PLAN:' 00026   
+IBPLNX   DFHMDF LENGTH=3,POS=(4,7),ATTRB=(UNPROT,NORM,IC,FSET),JUSTIFY=X00027   
+               (RIGHT,ZERO)                                             00028   
+         DFHMDF LENGTH=0004,POS=(4,11),ATTRB=(ASKIP,BRT),INITIAL='GRP:' 00029   
+IBGRPX   DFHMDF LENGTH=9,POS=(4,16),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00030   
+               IGHT,ZERO)                                               00031   
+         DFHMDF LENGTH=0004,POS=(4,26),ATTRB=(ASKIP,BRT),INITIAL='SEC:' 00032   
+IBSECX   DFHMDF LENGTH=5,POS=(4,31),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00033   
+               IGHT,ZERO)                                               00034   
+         DFHMDF LENGTH=0004,POS=(4,37),ATTRB=(ASKIP,NORM),INITIAL='PKG:X00035   
+               '                                                        00036   
+IBPKGX   DFHMDF LENGTH=3,POS=(4,42),ATTRB=(UNPROT,NORM,FSET)            00037   
+         DFHMDF LENGTH=0004,POS=(4,46),ATTRB=(ASKIP,NORM),INITIAL='LOB:X00038   
+               '                                                        00039   
+IBLOBX   DFHMDF LENGTH=1,POS=(4,51),ATTRB=(UNPROT,NORM,FSET)            00040   
+         DFHMDF LENGTH=0004,POS=(4,53),ATTRB=(ASKIP,NORM),INITIAL='PRV:X00041   
+               '                                                        00042   
+IBPRVX   DFHMDF LENGTH=2,POS=(4,58),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(LX00043   
+               EFT,BLANK)                                               00044   
+         DFHMDF LENGTH=0003,POS=(4,61),ATTRB=(ASKIP,NORM),INITIAL='FR:' 00045   
+IBFRX    DFHMDF LENGTH=2,POS=(4,65),ATTRB=(UNPROT,NORM,FSET)            00046   
+         DFHMDF LENGTH=0004,POS=(4,68),ATTRB=(ASKIP,NORM),INITIAL='EFF:X00047   
+               '                                                        00048   
+IBEDTX   DFHMDF LENGTH=6,POS=(4,73),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00049   
+               IGHT,ZERO)                                               00050   
+         DFHMDF LENGTH=1,POS=(4,80),ATTRB=(ASKIP,NORM)                  00051   
+         DFHMDF LENGTH=0024,POS=(6,1),ATTRB=(ASKIP,BRT),INITIAL='SELECTX00052   
+                CONTRACT LINE NO:'                                      00053   
+IBLNNO   DFHMDF LENGTH=2,POS=(6,26),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(RX00054   
+               IGHT,ZERO)                                               00055   
+         DFHMDF LENGTH=1,POS=(6,29),ATTRB=(ASKIP,NORM)                  00056   
+         DFHMDF LENGTH=0002,POS=(09,06),ATTRB=(ASKIP,BRT),INITIAL='LN'  00057   
+         DFHMDF LENGTH=0003,POS=(09,10),ATTRB=(ASKIP,NORM),INITIAL='LOBX00058   
+               '                                                        00059   
+         DFHMDF LENGTH=0003,POS=(09,14),ATTRB=(ASKIP,NORM),INITIAL='PRVX00060   
+               '                                                        00061   
+         DFHMDF LENGTH=0002,POS=(09,18),ATTRB=(ASKIP,NORM),INITIAL='FR' 00062   
+         DFHMDF LENGTH=0005,POS=(09,21),ATTRB=(ASKIP,NORM),INITIAL='EFFX00063   
+               DT'                                                      00064   
+         DFHMDF LENGTH=0006,POS=(09,29),ATTRB=(ASKIP,NORM),INITIAL='TERX00065   
+               MDT'                                                     00066   
+         DFHMDF LENGTH=0002,POS=(09,44),ATTRB=(ASKIP,BRT),INITIAL='LN'  00067   
+         DFHMDF LENGTH=0003,POS=(09,48),ATTRB=(ASKIP,NORM),INITIAL='LOBX00068   
+               '                                                        00069   
+         DFHMDF LENGTH=0003,POS=(09,52),ATTRB=(ASKIP,NORM),INITIAL='PRVX00070   
+               '                                                        00071   
+         DFHMDF LENGTH=0002,POS=(09,56),ATTRB=(ASKIP,NORM),INITIAL='FR' 00072   
+         DFHMDF LENGTH=0005,POS=(09,59),ATTRB=(ASKIP,NORM),INITIAL='EFFX00073   
+               DT'                                                      00074   
+         DFHMDF LENGTH=0006,POS=(09,67),ATTRB=(ASKIP,NORM),INITIAL='TERX00075   
+               MDT'                                                     00076   
+IBLN01   DFHMDF LENGTH=2,POS=(10,06),ATTRB=(PROT,NORM,FSET)             00077   
+IBLOB01  DFHMDF LENGTH=1,POS=(10,11),ATTRB=(PROT,NORM,FSET)             00078   
+IBPRV01  DFHMDF LENGTH=2,POS=(10,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00079   
+               FT,BLANK)                                                00080   
+IBFR01   DFHMDF LENGTH=2,POS=(10,18),ATTRB=(PROT,NORM,FSET)             00081   
+IBEDT01  DFHMDF LENGTH=6,POS=(10,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00082   
+               GHT,ZERO)                                                00083   
+IBTDT01  DFHMDF LENGTH=8,POS=(10,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00084   
+               GHT,ZERO)                                                00085   
+IBLN02   DFHMDF LENGTH=2,POS=(10,44),ATTRB=(PROT,NORM,FSET)             00086   
+IBLOB02  DFHMDF LENGTH=1,POS=(10,49),ATTRB=(PROT,NORM,FSET)             00087   
+IBPRV02  DFHMDF LENGTH=2,POS=(10,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00088   
+               FT,BLANK)                                                00089   
+IBFR02   DFHMDF LENGTH=2,POS=(10,56),ATTRB=(PROT,NORM,FSET)             00090   
+IBEDT02  DFHMDF LENGTH=6,POS=(10,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00091   
+               GHT,ZERO)                                                00092   
+IBTDT02  DFHMDF LENGTH=8,POS=(10,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00093   
+               GHT,ZERO)                                                00094   
+IBLN03   DFHMDF LENGTH=2,POS=(11,06),ATTRB=(PROT,NORM,FSET)             00095   
+IBLOB03  DFHMDF LENGTH=1,POS=(11,11),ATTRB=(PROT,NORM,FSET)             00096   
+IBPRV03  DFHMDF LENGTH=2,POS=(11,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00097   
+               FT,BLANK)                                                00098   
+IBFR03   DFHMDF LENGTH=2,POS=(11,18),ATTRB=(PROT,NORM,FSET)             00099   
+IBEDT03  DFHMDF LENGTH=6,POS=(11,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00100   
+               GHT,ZERO)                                                00101   
+IBTDT03  DFHMDF LENGTH=8,POS=(11,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00102   
+               GHT,ZERO)                                                00103   
+IBLN04   DFHMDF LENGTH=2,POS=(11,44),ATTRB=(PROT,NORM,FSET)             00104   
+IBLOB04  DFHMDF LENGTH=1,POS=(11,49),ATTRB=(PROT,NORM,FSET)             00105   
+IBPRV04  DFHMDF LENGTH=2,POS=(11,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00106   
+               FT,BLANK)                                                00107   
+IBFR04   DFHMDF LENGTH=2,POS=(11,56),ATTRB=(PROT,NORM,FSET)             00108   
+IBEDT04  DFHMDF LENGTH=6,POS=(11,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00109   
+               GHT,ZERO)                                                00110   
+IBTDT04  DFHMDF LENGTH=8,POS=(11,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00111   
+               GHT,ZERO)                                                00112   
+IBLN05   DFHMDF LENGTH=2,POS=(12,06),ATTRB=(PROT,NORM,FSET)             00113   
+IBLOB05  DFHMDF LENGTH=1,POS=(12,11),ATTRB=(PROT,NORM,FSET)             00114   
+IBPRV05  DFHMDF LENGTH=2,POS=(12,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00115   
+               FT,BLANK)                                                00116   
+IBFR05   DFHMDF LENGTH=2,POS=(12,18),ATTRB=(PROT,NORM,FSET)             00117   
+IBEDT05  DFHMDF LENGTH=6,POS=(12,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00118   
+               GHT,ZERO)                                                00119   
+IBTDT05  DFHMDF LENGTH=8,POS=(12,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00120   
+               GHT,ZERO)                                                00121   
+IBLN06   DFHMDF LENGTH=2,POS=(12,44),ATTRB=(PROT,NORM,FSET)             00122   
+IBLOB06  DFHMDF LENGTH=1,POS=(12,49),ATTRB=(PROT,NORM,FSET)             00123   
+IBPRV06  DFHMDF LENGTH=2,POS=(12,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00124   
+               FT,BLANK)                                                00125   
+IBFR06   DFHMDF LENGTH=2,POS=(12,56),ATTRB=(PROT,NORM,FSET)             00126   
+IBEDT06  DFHMDF LENGTH=6,POS=(12,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00127   
+               GHT,ZERO)                                                00128   
+IBTDT06  DFHMDF LENGTH=8,POS=(12,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00129   
+               GHT,ZERO)                                                00130   
+IBLN07   DFHMDF LENGTH=2,POS=(13,06),ATTRB=(PROT,NORM,FSET)             00131   
+IBLOB07  DFHMDF LENGTH=1,POS=(13,11),ATTRB=(PROT,NORM,FSET)             00132   
+IBPRV07  DFHMDF LENGTH=2,POS=(13,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00133   
+               FT,BLANK)                                                00134   
+IBFR07   DFHMDF LENGTH=2,POS=(13,18),ATTRB=(PROT,NORM,FSET)             00135   
+IBEDT07  DFHMDF LENGTH=6,POS=(13,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00136   
+               GHT,ZERO)                                                00137   
+IBTDT07  DFHMDF LENGTH=8,POS=(13,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00138   
+               GHT,ZERO)                                                00139   
+IBLN08   DFHMDF LENGTH=2,POS=(13,44),ATTRB=(PROT,NORM,FSET)             00140   
+IBLOB08  DFHMDF LENGTH=1,POS=(13,49),ATTRB=(PROT,NORM,FSET)             00141   
+IBPRV08  DFHMDF LENGTH=2,POS=(13,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00142   
+               FT,BLANK)                                                00143   
+IBFR08   DFHMDF LENGTH=2,POS=(13,56),ATTRB=(PROT,NORM,FSET)             00144   
+IBEDT08  DFHMDF LENGTH=6,POS=(13,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00145   
+               GHT,ZERO)                                                00146   
+IBTDT08  DFHMDF LENGTH=8,POS=(13,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00147   
+               GHT,ZERO)                                                00148   
+IBLN09   DFHMDF LENGTH=2,POS=(14,06),ATTRB=(PROT,NORM,FSET)             00149   
+IBLOB09  DFHMDF LENGTH=1,POS=(14,11),ATTRB=(PROT,NORM,FSET)             00150   
+IBPRV09  DFHMDF LENGTH=2,POS=(14,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00151   
+               FT,BLANK)                                                00152   
+IBFR09   DFHMDF LENGTH=2,POS=(14,18),ATTRB=(PROT,NORM,FSET)             00153   
+IBEDT09  DFHMDF LENGTH=6,POS=(14,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00154   
+               GHT,ZERO)                                                00155   
+IBTDT09  DFHMDF LENGTH=8,POS=(14,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00156   
+               GHT,ZERO)                                                00157   
+IBLN10   DFHMDF LENGTH=2,POS=(14,44),ATTRB=(PROT,NORM,FSET)             00158   
+IBLOB10  DFHMDF LENGTH=1,POS=(14,49),ATTRB=(PROT,NORM,FSET)             00159   
+IBPRV10  DFHMDF LENGTH=2,POS=(14,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00160   
+               FT,BLANK)                                                00161   
+IBFR10   DFHMDF LENGTH=2,POS=(14,56),ATTRB=(PROT,NORM,FSET)             00162   
+IBEDT10  DFHMDF LENGTH=6,POS=(14,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00163   
+               GHT,ZERO)                                                00164   
+IBTDT10  DFHMDF LENGTH=8,POS=(14,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00165   
+               GHT,ZERO)                                                00166   
+IBLN11   DFHMDF LENGTH=2,POS=(15,06),ATTRB=(PROT,NORM,FSET)             00167   
+IBLOB11  DFHMDF LENGTH=1,POS=(15,11),ATTRB=(PROT,NORM,FSET)             00168   
+IBPRV11  DFHMDF LENGTH=2,POS=(15,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00169   
+               FT,BLANK)                                                00170   
+IBFR11   DFHMDF LENGTH=2,POS=(15,18),ATTRB=(PROT,NORM,FSET)             00171   
+IBEDT11  DFHMDF LENGTH=6,POS=(15,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00172   
+               GHT,ZERO)                                                00173   
+IBTDT11  DFHMDF LENGTH=8,POS=(15,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00174   
+               GHT,ZERO)                                                00175   
+IBLN12   DFHMDF LENGTH=2,POS=(15,44),ATTRB=(PROT,NORM,FSET)             00176   
+IBLOB12  DFHMDF LENGTH=1,POS=(15,49),ATTRB=(PROT,NORM,FSET)             00177   
+IBPRV12  DFHMDF LENGTH=2,POS=(15,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00178   
+               FT,BLANK)                                                00179   
+IBFR12   DFHMDF LENGTH=2,POS=(15,56),ATTRB=(PROT,NORM,FSET)             00180   
+IBEDT12  DFHMDF LENGTH=6,POS=(15,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00181   
+               GHT,ZERO)                                                00182   
+IBTDT12  DFHMDF LENGTH=8,POS=(15,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00183   
+               GHT,ZERO)                                                00184   
+IBLN13   DFHMDF LENGTH=2,POS=(16,06),ATTRB=(PROT,NORM,FSET)             00185   
+IBLOB13  DFHMDF LENGTH=1,POS=(16,11),ATTRB=(PROT,NORM,FSET)             00186   
+IBPRV13  DFHMDF LENGTH=2,POS=(16,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00187   
+               FT,BLANK)                                                00188   
+IBFR13   DFHMDF LENGTH=2,POS=(16,18),ATTRB=(PROT,NORM,FSET)             00189   
+IBEDT13  DFHMDF LENGTH=6,POS=(16,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00190   
+               GHT,ZERO)                                                00191   
+IBTDT13  DFHMDF LENGTH=8,POS=(16,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00192   
+               GHT,ZERO)                                                00193   
+IBLN14   DFHMDF LENGTH=2,POS=(16,44),ATTRB=(PROT,NORM,FSET)             00194   
+IBLOB14  DFHMDF LENGTH=1,POS=(16,49),ATTRB=(PROT,NORM,FSET)             00195   
+IBPRV14  DFHMDF LENGTH=2,POS=(16,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00196   
+               FT,BLANK)                                                00197   
+IBFR14   DFHMDF LENGTH=2,POS=(16,56),ATTRB=(PROT,NORM,FSET)             00198   
+IBEDT14  DFHMDF LENGTH=6,POS=(16,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00199   
+               GHT,ZERO)                                                00200   
+IBTDT14  DFHMDF LENGTH=8,POS=(16,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00201   
+               GHT,ZERO)                                                00202   
+IBLN15   DFHMDF LENGTH=2,POS=(17,06),ATTRB=(PROT,NORM,FSET)             00203   
+IBLOB15  DFHMDF LENGTH=1,POS=(17,11),ATTRB=(PROT,NORM,FSET)             00204   
+IBPRV15  DFHMDF LENGTH=2,POS=(17,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00205   
+               FT,BLANK)                                                00206   
+IBFR15   DFHMDF LENGTH=2,POS=(17,18),ATTRB=(PROT,NORM,FSET)             00207   
+IBEDT15  DFHMDF LENGTH=6,POS=(17,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00208   
+               GHT,ZERO)                                                00209   
+IBTDT15  DFHMDF LENGTH=8,POS=(17,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00210   
+               GHT,ZERO)                                                00211   
+IBLN16   DFHMDF LENGTH=2,POS=(17,44),ATTRB=(PROT,NORM,FSET)             00212   
+IBLOB16  DFHMDF LENGTH=1,POS=(17,49),ATTRB=(PROT,NORM,FSET)             00213   
+IBPRV16  DFHMDF LENGTH=2,POS=(17,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00214   
+               FT,BLANK)                                                00215   
+IBFR16   DFHMDF LENGTH=2,POS=(17,56),ATTRB=(PROT,NORM,FSET)             00216   
+IBEDT16  DFHMDF LENGTH=6,POS=(17,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00217   
+               GHT,ZERO)                                                00218   
+IBTDT16  DFHMDF LENGTH=8,POS=(17,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00219   
+               GHT,ZERO)                                                00220   
+IBLN17   DFHMDF LENGTH=2,POS=(18,06),ATTRB=(PROT,NORM,FSET)             00221   
+IBLOB17  DFHMDF LENGTH=1,POS=(18,11),ATTRB=(PROT,NORM,FSET)             00222   
+IBPRV17  DFHMDF LENGTH=2,POS=(18,14),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00223   
+               FT,BLANK)                                                00224   
+IBFR17   DFHMDF LENGTH=2,POS=(18,18),ATTRB=(PROT,NORM,FSET)             00225   
+IBEDT17  DFHMDF LENGTH=6,POS=(18,21),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00226   
+               GHT,ZERO)                                                00227   
+IBTDT17  DFHMDF LENGTH=8,POS=(18,28),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00228   
+               GHT,ZERO)                                                00229   
+IBLN18   DFHMDF LENGTH=2,POS=(18,44),ATTRB=(PROT,NORM,FSET)             00230   
+IBLOB18  DFHMDF LENGTH=1,POS=(18,49),ATTRB=(PROT,NORM,FSET)             00231   
+IBPRV18  DFHMDF LENGTH=2,POS=(18,52),ATTRB=(PROT,NORM,FSET),JUSTIFY=(LEX00232   
+               FT,BLANK)                                                00233   
+IBFR18   DFHMDF LENGTH=2,POS=(18,56),ATTRB=(PROT,NORM,FSET)             00234   
+IBEDT18  DFHMDF LENGTH=6,POS=(18,59),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00235   
+               GHT,ZERO)                                                00236   
+IBTDT18  DFHMDF LENGTH=8,POS=(18,66),ATTRB=(PROT,NORM,FSET),JUSTIFY=(RIX00237   
+               GHT,ZERO)                                                00238   
+         DFHMDF LENGTH=0040,POS=(20,19),ATTRB=(ASKIP,NORM),INITIAL='PAGX00239   
+               ING:  PF7 (BACKWARD)    PF8 (FORWARD)'                   00240   
+IBMSG1   DFHMDF LENGTH=79,POS=(22,1),ATTRB=(PROT,BRT)                   00241   
+IBMSG2   DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00242   
+         DFHMSD TYPE=FINAL                                              00243   
+         END                                                            00244   
+/*                                                                      00245   

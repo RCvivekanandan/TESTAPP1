@@ -1,0 +1,67 @@
+1EL01SET  X  XCF               X   Y                                            
+2EL01MAP 24 80                                                                  
+3MAPID1   1  1     8AN                                                          
+3         1 28    24AB        ENGLISH CONTRACT INQUIRY                          
+3DATE1    1 72     8AN                                                          
+3         2 25    32AB        SELECT GROUP/SECTION SUSBSCRIBER                  
+3TIME1    2 72     8AN                                                          
+3         4  1     9AN        ENTER THE                                         
+3         4 11    12AB        GROUP NUMBER                                      
+3         4 24    14AN        AND EITHER THE                                    
+3         4 39    14AB        SECTION NUMBER                                    
+3         4 54     6AN        OR THE                                            
+3         4 61    17AB        SUBSCRIBER NUMBER                                 
+3         5  1    11AN        (IF KNOWN).                                       
+3         7  1    12AN        GROUP NUMBER                                      
+3         7 19     5AB        ===>                                              
+3GROUP    7 25     6UN                                                          
+3         7 32     1AN                                                          
+3         7 41    14AN        SECTION NUMBER                                    
+3         7 56     5AB        ====>                                             
+3SECTN    7 62     4UN                                                          
+3         7 67     1AN                                                          
+3         9  1    17AN        SUBSCRIBER NUMBER                                 
+3         9 19     5AB        ====>                                             
+3MEMBER   9 25    12UN                                                          
+3         9 38     1AN                                                          
+3        11  1    17AN        ENTER THE DATE OF                                 
+3        11 19     9AB        ADMISSION                                         
+3        11 29    23AN        FOR QUESTIONS REGARDING                           
+3        11 53    23AB        INPATIENT INSTITUTIONAL                           
+3        12  1    16AN        BENEFITS, OR THE                                  
+3        12 18    20AB        START AND COMPLETION                              
+3        12 39    20AN        DATES OF SERVICE FOR                              
+3        12 60    10AB        OUTPATIENT                                        
+3        13  1    13AB        INSTITUTIONAL                                     
+3        13 15     6AN        AND/OR                                            
+3        13 22    12AB        PROFESSIONAL                                      
+3        13 35    35AN        BENEFITS (INPATIENT OR OUTPATIENT).               
+3        15  1    27AN        SERVICE/ADMISSION DATE FROM                       
+3        15 29     5AB        ====>                                             
+3FROMDT  15 35     6UN                                                          
+3        15 42     1AN                                                          
+3        15 49     2AN        TO                                                
+3        15 52     5AB        ====>                                             
+3TODT    15 58     6UN                                                          
+3        15 65     1AN                                                          
+3        17  1     1AN        *                                                 
+3        17  3    23AB        ELS INFORMATION/UPDATES                           
+3        17 27    53AN        ******************************************        
+3                             ***********                                       
+3        18  1     1AN        *                                                 
+3MSG1    18  4    72AN                                                          
+3        18 78     1AN        *                                                 
+3        19  1     1AN        *                                                 
+3MSG2    19  4    72AN                                                          
+3        19 78     1AN        *                                                 
+3        20  1     1AN        *                                                 
+3MSG3    20  4    72AN                                                          
+3        20 78     1AN        *                                                 
+3        21  1     1AN        *                                                 
+3MSG4    21  4    72AN                                                          
+3        21 78     1AN        *                                                 
+3        22  1     1AN        *                                                 
+3MSG5    22  4    72AN                                                          
+3        22 78     1AN        *                                                 
+3        23  1    78AN        ******************************************        
+3                             ****************************************          

@@ -1,0 +1,31 @@
+**********************************************************************  00001000
+*                 RECORD LIST RECORD                                    00002000
+*              ENGLISH LANGUAGE PROTOTYPE                               00003000
+*                                                                       00004000
+*   COPY MEMBER NAME: ELPRLD                  MAX LENGTH: 61            00005002
+**********************************************************************  00006000
+*                                                                       00007000
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                 00008000
+*   *-*         U P D A T E   H I S T O R Y         *-*                 00009000
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                 00009100
+*                                                                       00009200
+*-CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION----------------------  00009300
+*                                                                       00009400
+*   XXXX    02/26/86  DES  ORIGINAL MODULE                              00009500
+*                                                                       00009600
+*                                                                       00009700
+**********************************************************************  00009800
+RLRECLST DS    0CL61        RECORD-LIST.                                00009900
+RLRECKEY DS    0CL8           RL-RECORD-KEY                             00010000
+RLRECPRF DS    CL8            RL-RECORD-PREFIX REDEFINED RL-RECORD-KEY  00010100
+RLFILETP DS    CL1            RL-FILE                                   00010200
+RLGROUPF EQU   C'G'              RL-GROUP-FILE                          00010301
+RLCONTRF EQU   C'C'              RL-CONTRACT-FILE                       00010401
+RLBENPRV EQU   C'B'              RL-BENEFIT-FILE                        00010501
+RLTABULR EQU   C'T'              RL-TABULAR-FILE                        00010604
+RLRECNAM DS    CL50           RL-RECORD-NAME                            00010700
+RLRPTFLG DS    CL1            RL-AUTO-REPRINT-FLA1                      00010800
+RLRPRINT EQU   C'Y'              RL-REPRINT                             00010901
+RLDELFLG DS    CL1            RL-DELETE-RECORD-FLAG                     00011000
+RLDELETE EQU   C'D'              RL-DELETE                              00012001
+RLLENGTH EQU   *-RLRECLST   LENGTH OF THE RECORD                        00013003

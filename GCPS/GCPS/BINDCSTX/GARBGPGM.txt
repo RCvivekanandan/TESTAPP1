@@ -1,0 +1,13 @@
+DSN SYSTEM(DP0C)                                                        00000100
+                                                                        00000200
+BIND PACKAGE (BD_CURRENT_1)           -                                 00000300
+MEMBER       (GARBGPGM)               -                                 00000400
+OWNER        (BINDBD)                 -                                 00000500
+QUALIFIER    (PAUDB01)                -                                 00000600
+EXPLAIN      (YES)                    -                                 00000700
+ACTION       (REPLACE)                -                                 00000800
+VALIDATE     (BIND)                   -                                 00000900
+ISOLATION    (UR)                     -                                 00001000
+DEGREE       (1)                                                        00001100
+                                                                        00001200
+END                                                                     00001300

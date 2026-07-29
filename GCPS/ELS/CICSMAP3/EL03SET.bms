@@ -1,0 +1,30 @@
+1EL03SET  X  XCF               X   Y                                            
+2EL03MAP 24 80                                                                  
+3MAPID3   1  1     8AN                                                          
+3         1 28    24AN        ENGLISH CONTRACT INQUIRY                          
+3         1 58     4AN        PAGE                                              
+3PGNBR    1 63     3AN                                                          
+3PGMSG    1 67     4AN                                                          
+3DATE3    1 72     8AN                                                          
+3TEXT1    2  1    79AN                                                          
+3TEXT2    3  1    79AN                                                          
+3TEXT3    4  1    79AN                                                          
+3TEXT4    5  1    79AN                                                          
+3TEXT5    6  1    79AN                                                          
+3TEXT6    7  1    79AN                                                          
+3TEXT7    8  1    79AN                                                          
+3TEXT8    9  1    79AN                                                          
+3TEXT9   10  1    79AN                                                          
+3TEXT10  11  1    79AN                                                          
+3TEXT11  12  1    79AN                                                          
+3TEXT12  13  1    79AN                                                          
+3TEXT13  14  1    79AN                                                          
+3TEXT14  15  1    79AN                                                          
+3TEXT15  16  1    79AN                                                          
+3TEXT16  17  1    79AN                                                          
+3TEXT17  18  1    79AN                                                          
+3TEXT18  19  1    79AN                                                          
+3TEXT19  20  1    79AN                                                          
+3TEXT20  21  1    79AN                                                          
+3TEXT21  22  1    79AN                                                          
+3TEXT22  23  1    79AB                                                          

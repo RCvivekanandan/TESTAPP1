@@ -1,0 +1,3 @@
+  REPRO INFILE(INFILE1) OUTFILE(OUTFILE1)                               00000100
+  REPRO INFILE(INFILE2) OUTFILE(OUTFILE2)                               00000200
+  REPRO INFILE(INFILE3) OUTFILE(OUTFILE3)                               00000300

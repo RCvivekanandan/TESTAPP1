@@ -1,0 +1,44 @@
+1ELCBSET  X  XCF               X   Y                                            
+2ELCBI01 24 80                                                                  
+3BFUNC    1  1     4PN   X    ELCB                                              
+3BTITLE   1 23    36AN   X                                                      
+3         1 65    15AN        SCREEN # ELCB00                                   
+3         2 30      AN        SELECT DATA ELEMENT                               
+3         4  1      AN        RECORD:                                           
+3BRPREX   4 11     8AN   X                                                      
+3BRNAME   4 21    50AN   X                                                      
+3         7  1      AN        FCN      ELEMENT ENGLISH DESCRIPTION              
+3         7 62      AN        NUMBER     STATUS                                 
+3BFCN1    8  2     1UN  X                                                       
+3BNAM1    8  4    75PN                                                          
+3BELEM1   9 62     6PN   X                                                      
+3BSTA1    9 72     7AB   X                                                      
+3BFCN2   10  2     1UN                                                          
+3BNAM2   10  4    75PN                                                          
+3BELEM2  11 62     6PN   X                                                      
+3BSTA2   11 72     7AB   X                                                      
+3BFCN3   12  2     1UN                                                          
+3BNAM3   12  4    75PN                                                          
+3BELEM3  13 62     6PN   X                                                      
+3BSTA3   13 72     7AB   X                                                      
+3BFCN4   14  2     1UN                                                          
+3BNAM4   14  4    75PN                                                          
+3BELEM4  15 62     6PN   X                                                      
+3BSTA4   15 72     7AB   X                                                      
+3BFCN5   16  2     1UN                                                          
+3BNAM5   16  4    75PN                                                          
+3BELEM5  17 62     6PN   X                                                      
+3BSTA5   17 72     7AB   X                                                      
+3BFCN6   18  2     1UN                                                          
+3BNAM6   18  4    75PN                                                          
+3BELEM6  19 62     6PN   X                                                      
+3BSTA6   19 72     7AB   X                                                      
+3BFCN7   20  2     1UN                                                          
+3BNAM7   20  4    75PN                                                          
+3BELEM7  21 62     6PN   X                                                      
+3BSTA7   21 72     7AB   X                                                      
+3        22 13      AN        OR SELECT ELEMENT NUMBER:                         
+3BSCOD   22 39     6UN                                                          
+3        22 46     1PN                                                          
+3BLINE   23  1    78AN                                                          
+3BERRM   24  1    79PB                                                          

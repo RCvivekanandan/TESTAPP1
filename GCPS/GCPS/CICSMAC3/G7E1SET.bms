@@ -1,0 +1,91 @@
+G7E1SET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+G7E1I01  DFHMDI SIZE=(24,80)                                            00003   
+S1FUNC   DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(ASKIP,NORM,FSET),INITIAL='X00004   
+               G7E1'                                                    00005   
+S1TITLE  DFHMDF LENGTH=0032,POS=(1,20),ATTRB=(ASKIP,NORM),INITIAL='BENEX00006   
+               FIT PROVISION TYPE E        '                            00007   
+         DFHMDF LENGTH=0008,POS=(1,65),ATTRB=(ASKIP,NORM),INITIAL='SCREX00008   
+               EN #'                                                    00009   
+S1SCRN   DFHMDF LENGTH=0006,POS=(1,74),ATTRB=(ASKIP,NORM,FSET),INITIAL=X00010   
+               '007E01'                                                 00011   
+         DFHMDF LENGTH=0004,POS=(2,1),ATTRB=(ASKIP,NORM),INITIAL='PLN:' 00012   
+S1PLNCD  DFHMDF LENGTH=3,POS=(2,6),ATTRB=(ASKIP,NORM,FSET)              00013   
+         DFHMDF LENGTH=0004,POS=(2,10),ATTRB=(ASKIP,NORM),INITIAL='GRP:X00014   
+               '                                                        00015   
+S1GRPNO  DFHMDF LENGTH=9,POS=(2,15),ATTRB=(ASKIP,NORM,FSET)             00016   
+         DFHMDF LENGTH=0004,POS=(2,26),ATTRB=(ASKIP,NORM),INITIAL='SEC:X00017   
+               '                                                        00018   
+S1SECNO  DFHMDF LENGTH=5,POS=(2,31),ATTRB=(ASKIP,NORM,FSET)             00019   
+         DFHMDF LENGTH=0004,POS=(2,37),ATTRB=(ASKIP,NORM),INITIAL='PKG:X00020   
+               '                                                        00021   
+S1PKGCD  DFHMDF LENGTH=3,POS=(2,42),ATTRB=(ASKIP,NORM,FSET)             00022   
+         DFHMDF LENGTH=0004,POS=(2,46),ATTRB=(ASKIP,NORM),INITIAL='LOB:X00023   
+               '                                                        00024   
+S1LOB    DFHMDF LENGTH=1,POS=(2,51),ATTRB=(ASKIP,NORM,FSET)             00025   
+         DFHMDF LENGTH=0004,POS=(2,53),ATTRB=(ASKIP,NORM),INITIAL='PRV:X00026   
+               '                                                        00027   
+S1PRV    DFHMDF LENGTH=2,POS=(2,58),ATTRB=(ASKIP,NORM,FSET)             00028   
+         DFHMDF LENGTH=0003,POS=(2,61),ATTRB=(ASKIP,NORM),INITIAL='FR:' 00029   
+S1FRL    DFHMDF LENGTH=2,POS=(2,65),ATTRB=(ASKIP,NORM,FSET)             00030   
+         DFHMDF LENGTH=0005,POS=(2,68),ATTRB=(ASKIP,NORM),INITIAL='EFDTX00031   
+               :'                                                       00032   
+S1EFFDT  DFHMDF LENGTH=6,POS=(2,74),ATTRB=(ASKIP,NORM,FSET)             00033   
+         DFHMDF LENGTH=0011,POS=(3,65),ATTRB=(ASKIP,NORM),INITIAL='PAGEX00034   
+                4 OF 5'                                                 00035   
+         DFHMDF LENGTH=0018,POS=(6,5),ATTRB=(ASKIP,NORM),INITIAL='BENEFX00036   
+               IT SCOPE ID :'                                           00037   
+S1BESCI  DFHMDF LENGTH=4,POS=(6,41),ATTRB=(UNPROT,NORM,IC,FSET),JUSTIFYX00038   
+               =(LEFT,BLANK)                                            00039   
+         DFHMDF LENGTH=1,POS=(6,46),ATTRB=(ASKIP,NORM)                  00040   
+         DFHMDF LENGTH=0023,POS=(7,5),ATTRB=(ASKIP,NORM),INITIAL='EXCEPX00041   
+               TION SCHEDULE ID :'                                      00042   
+S1EXCSC  DFHMDF LENGTH=4,POS=(7,41),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(LX00043   
+               EFT,BLANK)                                               00044   
+         DFHMDF LENGTH=1,POS=(7,46),ATTRB=(ASKIP,NORM)                  00045   
+         DFHMDF LENGTH=0028,POS=(9,5),ATTRB=(ASKIP,NORM),INITIAL='HOSP.X00046   
+                ADM. RESTRICTION IND :'                                 00047   
+S1HADMR  DFHMDF LENGTH=1,POS=(9,41),ATTRB=(UNPROT,NORM,FSET)            00048   
+         DFHMDF LENGTH=1,POS=(9,43),ATTRB=(ASKIP,NORM)                  00049   
+         DFHMDF LENGTH=0007,POS=(9,59),ATTRB=(ASKIP,NORM),INITIAL='BPVIX00050   
+               D ='                                                     00051   
+S1BPVID  DFHMDF LENGTH=6,POS=(9,67),ATTRB=(ASKIP,NORM,FSET)             00052   
+         DFHMDF LENGTH=0029,POS=(10,5),ATTRB=(ASKIP,NORM),INITIAL='HOSPX00053   
+               . ADM. RESTRICTION DAYS :'                               00054   
+S1HADRD  DFHMDF LENGTH=3,POS=(10,41),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00055   
+               RIGHT,ZERO)                                              00056   
+         DFHMDF LENGTH=1,POS=(10,45),ATTRB=(ASKIP,NORM)                 00057   
+S1SLOTH  DFHMDF LENGTH=0007,POS=(10,59),ATTRB=(ASKIP,DRK),INITIAL='SLOTX00058   
+               # ='                                                     00059   
+S1SLOT   DFHMDF LENGTH=7,POS=(10,67),ATTRB=(ASKIP,DRK,FSET)             00060   
+         DFHMDF LENGTH=0032,POS=(12,5),ATTRB=(ASKIP,NORM),INITIAL='BENEX00061   
+               FIT MAXIMUM VISIT IND :     '                            00062   
+S1BMVSI  DFHMDF LENGTH=1,POS=(12,41),ATTRB=(UNPROT,NORM,FSET)           00063   
+         DFHMDF LENGTH=1,POS=(12,43),ATTRB=(ASKIP,NORM)                 00064   
+         DFHMDF LENGTH=0032,POS=(13,5),ATTRB=(ASKIP,NORM),INITIAL='BENEX00065   
+               FIT MAXIMUM VISITS :        '                            00066   
+S1BMVST  DFHMDF LENGTH=3,POS=(13,41),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00067   
+               RIGHT,ZERO)                                              00068   
+         DFHMDF LENGTH=1,POS=(13,45),ATTRB=(ASKIP,NORM)                 00069   
+         DFHMDF LENGTH=0026,POS=(15,5),ATTRB=(ASKIP,NORM),INITIAL='MAXIX00070   
+               MUM AMOUNT PER VISIT :'                                  00071   
+S1XAV    DFHMDF LENGTH=6,POS=(15,41),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00072   
+               RIGHT,ZERO)                                              00073   
+         DFHMDF LENGTH=1,POS=(15,48),ATTRB=(ASKIP,NORM)                 00074   
+         DFHMDF LENGTH=0019,POS=(17,5),ATTRB=(ASKIP,NORM),INITIAL='CORRX00075   
+               IDOR OVERRIDE :'                                         00076   
+S1COROR  DFHMDF LENGTH=1,POS=(17,41),ATTRB=(UNPROT,NORM,FSET)           00077   
+         DFHMDF LENGTH=1,POS=(17,43),ATTRB=(ASKIP,NORM)                 00078   
+         DFHMDF LENGTH=0027,POS=(19,5),ATTRB=(ASKIP,NORM),INITIAL='TREAX00079   
+               TMENT TIME FACTOR IND :'                                 00080   
+S1TRTMI  DFHMDF LENGTH=1,POS=(19,41),ATTRB=(UNPROT,NORM,FSET)           00081   
+         DFHMDF LENGTH=1,POS=(19,43),ATTRB=(ASKIP,NORM)                 00082   
+         DFHMDF LENGTH=0023,POS=(20,5),ATTRB=(ASKIP,NORM),INITIAL='TREAX00083   
+               TMENT TIME FACTOR :'                                     00084   
+S1TRTMF  DFHMDF LENGTH=3,POS=(20,41),ATTRB=(UNPROT,NORM,FSET),JUSTIFY=(X00085   
+               RIGHT,ZERO)                                              00086   
+         DFHMDF LENGTH=1,POS=(20,45),ATTRB=(PROT,NORM)                  00087   
+S1ERR    DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00088   
+         DFHMSD TYPE=FINAL                                              00089   
+         END                                                            00090   
+/*                                                                      00091   

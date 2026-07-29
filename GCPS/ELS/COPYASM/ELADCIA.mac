@@ -1,0 +1,141 @@
+ELADCIA  DSECT                                                                  
+**********************************************************************          
+*   ELADCIA      C O M M O N   I N T E R F A C E   A R E A                      
+*                                                                               
+*    CONTAINS POINTERS TO NUMEROUS DATA AREAS PASSED THROUGHOUT A               
+*    MYRIAD OF PROGRAMS LINKED TOGETHER TO PROCESS A TRANSACTION OR             
+*    POSSIBLY A SERIES OF TRANSACTIONS.                                         
+*                                                                               
+**********************************************************************          
+* -CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION---------------------      **35
+*   XXXXXX   02/26/86  DES   ADDED COPIED FROM HGADCIA FOR ENG. LANG.           
+*    00001   03/10/86  DES   ADDED I/O PARM ADDRESSES FOR EACH FILE             
+*    00002   03/19/86  DES   ADDED CODE MANUAL INTERFACE & ELO CONTROL          
+*                            BLOCK                                              
+*    00003   03/31/86  NAC   ADDED FIELD TO INDICATE WHAT SCREEN IS             
+*                            BEING PROCESSED                                    
+*    00004   04/01/86  DES   REMOVED 1 HEADER LINE FROM OUTPUT AREA             
+*                            & ADDED BEN PROV LIST PNTRS                        
+*    00005   04/02/86  JLA   ADDED POINTER FOR PAYMENT LEVEL                    
+*                            SWITCHES AREA.                                     
+*                            ADDED FOUR POINTERS FOR PAYMENT LEVEL              
+*                            TABLES, PAIRED WITH FOUR BEN PROV                  
+*                            LIST POINTERS.                                     
+*    00006   07/10/86  AMJ   FIRST STEP OF CONVERSION TO NEW                    
+*                            CONTRACT POINTERS                                  
+*                                                                               
+*                                                                               
+**********************************************************************          
+*                                                                               
+CIAAREA  DS   0CL4000             COMMON INTERFACE AREA                         
+CIADDN   DS    CL8                ELAIOGMN DDNAME PARM                          
+CIAIOINT DS    F                  ELAIOPGM I/O PARM AREA POINTER                
+CIAERRMS DS    F                  ERROR MESSAGE         ADDRESS                 
+CIAERLIO DS    F                  RECORD LIST    I/O PARM ADDRESS               
+CIAELPRL DS    F                  RECORD LIST      RECORD ADDRESS               
+CIAEDEIO DS    F                  DATA ELEMENT   I/O PARM ADDRESS               
+CIAELPDE DS    F                  DATA ELEMENT     RECORD ADDRESS               
+CIAECVIO DS    F                  CODE VALUE     I/O PARM ADDRESS               
+CIAELPCV DS    F                  CODE VALUE       RECORD ADDRESS               
+CIAEENIO DS    F                  ENGLISH NAME   I/O PARM ADDRESS               
+CIAELPEN DS    F                  ENGLISH NAME     RECORD ADDRESS               
+CIAECNIO DS    F                  COBOL NAME     I/O PARM ADDRESS               
+CIAELPCN DS    F                  COBOL NAME       RECORD ADDRESS               
+CIAGRPIO DS    F                  GROUP SPECIFIC I/O PARM ADDRESS               
+CIAGRPSP DS    F                  GROUP SPECIFIC   RECORD ADDRESS               
+CIACONIO DS    F                  CONTRACT       I/O PARM ADDRESS               
+***********************************************************************         
+** THE NEXT FOUR POINTERS WILL BE REPLACED BY BASIC AND SUPPLEMENTAL **         
+** INSTITUTIONAL AND PROFESSIONAL CONTRACT POINTERS AFTER CONVERSION.**         
+***********************************************************************         
+CIABCCNT DS    F                  BC CONTRACT      RECORD ADDRESS               
+CIABSCNT DS    F                  BS CONTRACT      RECORD ADDRESS               
+CIACMCNT DS    F                  CMM CONTRACT     RECORD ADDRESS               
+CIASMCNT DS    F                  SMM CONTRACT     RECORD ADDRESS               
+CIABENIO DS    F                  BENEFIT PROV   I/O PARM ADDRESS               
+CIABENPV DS    F                  BENEFIT PROV     RECORD ADDRESS               
+CIATABIO DS    F                  TABULAR        I/O PARM ADDRESS               
+CIATABLR DS    F                  TABULAR          RECORD ADDRESS               
+CIAPLS   DS    F                  PAYMENT-LEVEL-SWITCH-PTR  ADDRS               
+CIABNPIP DS    F                  BEN-PROV-PROF-IP-PTR  REC ADDRS               
+CIAPPLTI DS    F                  BEN-PROV-PROF-IP-PLT-PTR  ADDRS               
+CIABEPOP DS    F                  BEN-PROV-PROF-OP-PTR  REC ADDRS               
+CIAPPLTO DS    F                  BEN-PROV-PROF-OP-PLT-PTR  ADDRS               
+CIABEIIP DS    F                  BEN-PROV-INST-IP-PTR  REC ADDRS               
+CIAIPLTI DS    F                  BEN-PROV-INST-IP-PLT-PTR  ADDRS               
+CIABEIOP DS    F                  BEN-PROV-INST-OP-PTR  REC ADDRS               
+CIAIPLTO DS    F                  BEN-PROV-INST-OP-PLT-PTR  ADDRS               
+***********************************************************************         
+** THE NEXT FOUR POINTERS WILL BE REPLACED BY 16 BYTES OF FILLER     **         
+** AFTER CONVERSION.                                                 **         
+***********************************************************************         
+CIAIBCNT DS    F                  INST BASIC CONTRACT RECORD ADDRESS            
+CIAISCNT DS    F                  INST SUPP CONTRACT  RECORD ADDRESS            
+CIAPBCNT DS    F                  PROF BASIC CONTRACT RECORD ADDRESS            
+CIAPSCNT DS    F                  PROF SUPP CONTRACT  RECORD ADDRESS            
+CIAGRPNO DS    CL6                GROUP NO                                      
+CIASECTN DS    CL4                SECTION NO                                    
+CIALOB   DS    CL1                LINE OF BUSINESS                              
+CIAFRL   DS    CL1                FAMILY RELATIONSHIP LEVEL                     
+CIAPRVCT DS    CL2                PROVIDER CONTROL                              
+CIAEFTDT DS    PL3                EFFECTIVE DATE                                
+CIARCLSK DS    0CL8               RECORD LIST KEY                               
+CIADTELK DS    0CL11              DATA ELEMENT KEY                              
+CIACDVLK DS    0CL23              CODE VALUE KEY                                
+CIARECID DS    CL8                RECORD ID                                     
+CIAELMNO DS    PL3                ELEMENT NO                                    
+CIACDEVL DS    CL10               CODE VALUE                                    
+CIASEQNO DS    CL2                SEQUENCE NO                                   
+CIAENNMK DS    0CL83              ENGLISH NAME KEY                              
+CIARECEN DS    CL8                RECORD ID AS PART OF ENGLISH NAME KEY         
+CIAENGNM DS    CL75               ENGLISH NAME                                  
+CIASYNMK DS    0CL38              SYSTEM NAME KEY                               
+CIARECSY DS    CL8                RECORD ID AS PART OF SYSTEM NAME KEY          
+CIASYSNM DS    CL30               SYSTEM NAME                                   
+         DS    CL55               FILLER                                        
+CIACDMNL DS    0CL1731            ELI-CODES-MANUAL-INTERFACE.                   
+CIACRECP DS    CL8                  ELI-RECORD-PREFIX         X(08).            
+CIACSYNM DS    CL30                 ELI-ELEMENT-SYSTEM-NAME   X(30).            
+CIACCDVL DS    CL10                 ELI-CODE-VALUE            X(10).            
+CIACCNBT DS    CL20                 ELI-CONDITION-BITS        X(20).            
+CIACDEST DS    CL1                  ELI-DESCRIPTION-TYPE      X(01).            
+CIASHORT EQU   C'S'                   ELI-SHORT-DESCRIPTION   VAL 'S'.          
+CIALONG  EQU   C'L'                   ELI-LONG-DESCRIPTION    VAL 'L'.          
+CIACRTCD DS    CL1                  ELI-RETURN-FLAG           X(01).            
+CIARETOK EQU   C' '                   ELI-RETURN-OK         VAL SPACE.          
+CIARETNF EQU   C'N'                   ELI-RETURN-NOTFND     VAL 'N'.            
+CIARETER EQU   C'E'                   ELI-RETURN-ERROR      VAL 'E'.            
+CIACSHRT DS    CL79                 ELI-SHORT-DESCRIPTION     X(79).            
+CIACLNGT DS    0CL1582              ELI-LONG-DESCRIPTION-TBL.                   
+CIACNOLN DS    PL2                  ELI-NBR-DESCR-LINES  S9(03)  COMP-3         
+CIACDSLN DS    0CL79                ELI-DESCRIPTION-LINE      X(79)             
+         DS    20CL79                   OCCURS 20 TIMES.                        
+CIAOCNTB DS    0CL1834            ELO-CONTROL-BLOCK.                            
+CIAOFUNC DS    CL1                  ELO-FUNCTION       X(01).                   
+CIACONTN EQU   C' '                   ELO-CONTINUE     VAL ' '.                 
+CIANEWPG EQU   C'P'                   ELO-NEW-PAGE     VAL 'P'.                 
+CIAEND   EQU   C'E'                   ELO-END          VAL 'E'.                 
+CIAORTCD DS    CL1                  ELO-RETURN         X(01).                   
+CIAPRCOK EQU   C'0'                   ELO-PROCESS-OK   VAL '0'.                 
+CIAINVRQ EQU   C'1'                   ELO-INVALID-REQUEST  VAL '1'.             
+CIAORCPT DS    A                    ELO-RECORD-PTR S9(08)   COMP SYNC           
+CIAO1SCR DS    A                   ELO-FIRST-SCREEN-PTR S9(8) COMP SYNC         
+CIAONOHD DS    PL2                  ELO-NBR-HEADER-LINES  S9(03) COMP-3         
+CIAONODT DS    PL2                  ELO-NBR-DETAIL-LINES S9(03) COMP-3          
+CIAOHDRL DS    0CL79                ELO-HEADER.                                 
+         DS    2CL79                  ELO-HEADER-LINES  X(79) OCCURS 2          
+CIAODTLL DS    0CL79                ELO-DETAIL.                                 
+         DS    20CL79                 ELO-DETAIL-LINE  X(79) OCCURS 20          
+CIASLOB  DS    CL1                LOB SCREEN           X(01).                   
+CIANTAPP EQU   C'0'                   NOT-APPLICABLE   VAL '0'.                 
+CIABC    EQU   C'1'                   BLUE-CROSS       VAL '1'.                 
+CIABS    EQU   C'2'                   BLUE-SHIELD      VAL '2'.                 
+CIAMM    EQU   C'3'                   MAJOR-MEDICAL    VAL '3'.                 
+CIACMM   EQU   C'4'                   CMM              VAL '4'.                 
+CIABCBS  EQU   C'5'                   BC/BS            VAL '5'.                 
+CIABCMM  EQU   C'6'                   BC/MM            VAL '6'.                 
+CIABSMM  EQU   C'7'                   BS/MM            VAL '7'.                 
+CIACSMM  EQU   C'8'                   BC/BS/MM         VAL '8'.                 
+CIATPHA  DS    CL58               CIA-TOPIC-PHASE X(58)                         
+         DS    CL87               FILLER                                        
+CIALNGTH EQU   *-ELADCIA          LENGTH OF THE COMPLETE COMMON AREA            

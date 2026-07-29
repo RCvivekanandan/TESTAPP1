@@ -1,0 +1,83 @@
+         DS    0F                                                               
+ELRECLEN DS    0CL10                                                            
+         SPACE                                                                  
+***********************************************************************         
+*         *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*         *         
+*         *-*         U P D A T E   H I S T O R Y         *-*         *         
+*         *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*         *         
+*                                                                     *         
+**-CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION---------------*     *         
+*                                                                     *         
+*   0000     02/26/86  DES  DAVE SECOR - ORIGINAL MODULE              *         
+*                              (COPIED FROM HGADRLEN)                 *         
+*   0001     03/19/86  DES  ADDED ELPAGEFL                            *         
+*   0002     03/24/86  AMJ  CHANGED NAME OF ECI STANDARD DFHCOMMAREA  *         
+*                           LENGTH FIELD TO 'ELCDIQCL' AND INSERTED   *         
+*                           CORRECT VALUE                             *         
+*   0003     03/26/86  AMJ  ADDED 13 BYTES TO LENGTH 'ELCDIQCL'       *         
+*   0004     03/27/86  AMJ  ADDED 1 BYTE TO LENGTH 'ELCDIQCL'         *         
+*   0005     03/31/86  AMJ  CHANGED LENGTH 'ELCDIQCL' TO 1963         *         
+*   0006     03/31/86  AMJ  CHANGED LENGTH 'ELCDIQCL' TO 2000         *         
+*   0007     04/02/86  JLA  ADDED LENGTHS FOR:                        *         
+*                             BEN PROV LIST(S) AREA                   *         
+*                             PAYMENT LEVEL TABLE(S) AREA             *         
+*                             PAYMENT LEVEL SWITCHES AREA             *         
+*   0008     04/03/86  JLA  CHANGES LENGTHS FOR BEN PROV LISTS        *         
+*   0009     07/21/86  AMJ  ADDED LENGTH FOR GCFLDVAL RECORD          *         
+***********************************************************************         
+*   FILE DD NAMES AND RECORD LENGTHS FOR APPLICATION FILES            *         
+*   AND COMMON INTERFACE AREA AND I/O PARM RECORD.                    *         
+*   VARIABLE LENGTH RECORDS WILL HAVE MAXIMUM LENGTHS.                *         
+*                                                                     *         
+*   BECAUSE OF THE FREQUENT CHANGES TO THESE FILES CARE MUST          *         
+*   BE TAKEN TO COMPARE THESE LENGTHS TO THE RDW'S AND OTHER          *         
+*   DOCUMENTATION.  THIS COPY MEMBER WILL BE UPDATED AS THE           *         
+*   NEED ARISES BUT UNTIL THE RECORDS STABILIZE IT MAY                *         
+*   FREQUENTLY BE IN ERROR.                                           *         
+***********************************************************************         
+**** GENERIC CONTRACT READ ONLY DATASETS                                        
+ELBENPRV DC    C'GCBENPRV',H'4000'       BENEFIT PROVISION FILE                 
+         SPACE                                                                  
+ELCONTR  DC    C'GCCONTR ',H'8000'       CONTRACT FILE                          
+         SPACE                                                                  
+ELGRPSPC DC    C'GCGRPSPC',H'4000'       GROUP SPECIFIC FILE                    
+         SPACE                                                                  
+ELTABULR DC    C'GCTABULR',H'4000'       TABULAR FILE                           
+         SPACE                                                                  
+ELDATES  DC    C'GCDATES ',H'4000'       DATES FILE                             
+         SPACE                                                                  
+ELSYSTBL DC    C'GCSYSTBL',H'4000'       GENERIC CONTR SYSTEM TABLE             
+         SPACE                                                                  
+ELELPRL  DC    C'ELPRL   ',H'61'         ENGLISH LANGUAGE RECORD LIST           
+         SPACE                                                                  
+ELELPDE  DC    C'ELPDE   ',H'1041'       ENGLISH LANGUAGE DATA ELEMENT          
+         SPACE                                                                  
+ELELPCV  DC    C'ELPCV   ',H'1024'       ENGLISH LANGUAGE CODE VALUE            
+         SPACE                                                                  
+ELELPEN  DC    C'ELPEN   ',H'87'         ENGLISH LANGUAGE ENGL. NAME            
+         SPACE                                                                  
+ELELPCN  DC    C'ELPCN   ',H'42'         ENGLISH LANGUAGE SYSTEM NAME           
+         SPACE                                                                  
+ELPAGEFL DC    C'ELPAGEFL',H'2048'       ENGLISH LANGUAGE PAGE FILE             
+         SPACE                                                                  
+ELIOPARM DC    C'********',H'572'        IOPARMS                                
+         SPACE                                                          00020000
+ELCDIQCL DC    C'********',H'2000'       ECI STANDARD DFHCOMMAREA               
+         SPACE                                                          00020000
+ELCIARCL DC    C'********',H'4000'       CIA (COMMON INTERFACE AREA)            
+         SPACE                                                          00020000
+ELCIAPTL DC    C'********',H'4'          CIA POINTER                            
+         SPACE                                                          00020000
+ELBPLFXL DC    C'********',H'11'         PROV LIST(S) FIXED PORTION             
+ELBPLVYL DC    C'********',H'16'         PROV LIST(S) VARIABLE PORTION          
+ELBPLMXO DC    C'********',H'25'         PROV LIST(S) MAXIMUM OCCURS            
+         SPACE                                                          00020000
+ELPLTFXL DC    C'********',H'10'         PAY LVL TBLE FIXED PORTION             
+ELPLTVYL DC    C'********',H'683'        PAY LVL TBLE VARIABLE PORTION          
+ELPLTMXO DC    C'********',H'25'         PAY LVL TBLE MAXIMUM OCCURS            
+         SPACE                                                          00020000
+ELPLSFXL DC    C'********',H'167'        PAY LVL SWITCHES AREA LEN              
+         SPACE                                                                  
+ELFLDVAL DC    C'GCFLDVAL',H'4000'       GCPS FIELD VALIDATION                  
+         DC    8X'FF'                                                   00020000
+ELRECL   EQU   *-ELRECLEN                                                       

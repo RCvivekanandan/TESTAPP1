@@ -1,0 +1,76 @@
+1ELRMSET  X  XCF               X   Y                                            
+2ELRMI01 24 80                                                                  
+3RMFUNCN  1  1     4PN   X    ELRM                                              
+3         1 28    24AN        HCSC / REALMED INTERFACE                          
+3         1 65     8AN        SCREEN #                                          
+3RMSCRN   1 74     6AN   X    ELRM00                                            
+3         2 24    33AN        HCSC / REALMED TRANSACTION SCREEN                 
+3         4  1    41AN        ENTER WHAT WILL BE RECEIVED FROM REALMED:         
+3         6  5     5AN        GROUP                                             
+3         6 15     7AN        SECTION                                           
+3         6 25    10AN        SUBSCRIBER                                        
+3         6 37    13AN        ADS PROG TYPE                                     
+3         6 52    12AN        SERVICE DATE                                      
+3RMGRP    7  3     9UN  XXRZ  _________                                         
+3         7 13     1AN                                                          
+3RMSEC    7 16     5UN   XRZ  _____                                             
+3         7 22     1AN                                                          
+3RMSUB    7 25     9UN   XRZ  _________                                         
+3         7 35     1AN                                                          
+3RMPROD   7 42     2UN   XLB  __                                                
+3         7 45     1AN                                                          
+3RMSRVDT  7 54     8UN   XRZ  ________                                          
+3         7 63     1AN                                                          
+3         9  3     9AN        LAST NAME                                         
+3         9 15    10AN        FIRST NAME                                        
+3         9 28     3AN        SEX                                               
+3         9 33    10AN        BIRTH DATE                                        
+3         9 45    12AN        RELATIONSHIP                                      
+3RMLNAME 10  5     5UN   XLB  _____                                             
+3        10 11     1AN                                                          
+3RMFNAME 10 15     9UN   XLB  _________                                         
+3        10 25     1AN                                                          
+3RMSEX   10 29     1UN   XLB  _                                                 
+3        10 31     1AN                                                          
+3RMBDATE 10 34     8UN   XRZ  ________                                          
+3        10 43     1AN                                                          
+3RMREL   10 50     1UN   XLB  _                                                 
+3        10 52     1AN                                                          
+3        11  1    41AN        DISPLAY WHAT IS RETURNED BACK TO REALMED:         
+3        12  3    13AN        IND DEDUCT IN                                     
+3        12 35    17AN        IND DEDUCT IN MET                                 
+3RMDEDII 13  3    25UN   XLB                                                    
+3        13 29     1AN                                                          
+3RMDEIIM 13 35    25UN   XLB                                                    
+3        13 61     1AN                                                          
+3        14  3    14AN        IND DEDUCT OUT                                    
+3        14 35    18AN        IND DEDUCT OUT MET                                
+3RMDEDIO 15  3    25UN   XLB                                                    
+3        15 29     1AN                                                          
+3RMDEIOM 15 35    25UN   XLB                                                    
+3        15 61     1AN                                                          
+3        16  3    13AN        FAM DEDUCT IN                                     
+3        16 35    17AN        FAM DEDUCT IN MET                                 
+3RMDEDFI 17  3    25UN   XLB                                                    
+3        17 29     1AN                                                          
+3RMDEFIM 17 35    25UN   XLB                                                    
+3        17 61     1AN                                                          
+3        18  3    14AN        FAM DEDUCT OUT                                    
+3        18 35    18AN        FAM DEDUCT OUT MET                                
+3RMDEDFO 19  3    25UN   XLB                                                    
+3        19 29     1AN                                                          
+3RMDEFOM 19 35    25UN   XLB                                                    
+3        19 61     1AN                                                          
+3        20  3     8AN        COPAY IN                                          
+3        20 35     9AN        COPAY OUT                                         
+3RMCOPYI 21  3    25UN   XLB                                                    
+3        21 29     1AN                                                          
+3RMCOPYO 21 35    25UN   XLB                                                    
+3        21 61     1AN                                                          
+3        22  3    14AN        COINSURANCE IN                                    
+3        22 35    15AN        COINSURANCE OUT                                   
+3RMCOINI 23  3    25UN   XLB                                                    
+3        23 29     1AN                                                          
+3RMCOINO 23 35    25UN   XLB                                                    
+3        23 61     1AN                                                          
+3RMERMSG 24  1    79AB                                                          

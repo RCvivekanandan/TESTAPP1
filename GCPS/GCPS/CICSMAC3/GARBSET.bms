@@ -1,0 +1,73 @@
+GARBSET  DFHMSD TYPE=MAP,MODE=INOUT,LANG=COBOL,CTRL=FREEKB,DATA=FIELD,TX00001   
+               IOAPFX=YES                                               00002   
+GARBI01  DFHMDI SIZE=(24,80)                                            00003   
+FUNCTIN  DFHMDF LENGTH=0004,POS=(1,1),ATTRB=(PROT,BRT,FSET),INITIAL='GAX00004   
+               RB'                                                      00005   
+         DFHMDF LENGTH=0038,POS=(1,22),ATTRB=(ASKIP,BRT),INITIAL='ATB:RX00006   
+               ANGE BY GROUP && SECTION NUMBERS'                        00007   
+SCRENNO  DFHMDF LENGTH=0006,POS=(1,72),ATTRB=(ASKIP,BRT,FSET),         X00010   
+               INITIAL='0ARB00'                                         00011   
+         DFHMDF LENGTH=0011,POS=(4,20),ATTRB=(ASKIP,BRT),INITIAL='CHANGX00014   
+               E FROM'                                                  00015   
+         DFHMDF LENGTH=0009,POS=(4,35),ATTRB=(ASKIP,BRT),INITIAL='CHANGX00014   
+               E TO'                                                    00015   
+         DFHMDF LENGTH=0015,POS=(5,01),ATTRB=(ASKIP,BRT),INITIAL='NETWOX00021   
+               RK SET ID:'                                              00022   
+NTKSTFM  DFHMDF LENGTH=0005,POS=(5,20),ATTRB=(UNPROT,NORM,IC,FSET),JUSTX00029   
+               IFY=(RIGHT),INITIAL='_____'                              00030   
+         DFHMDF LENGTH=1,POS=(5,26),ATTRB=(ASKIP,NORM)                  00028   
+NTKSTTO  DFHMDF LENGTH=0005,POS=(5,35),ATTRB=(UNPROT,NORM,FSET),JUSTIFYX00029   
+               =(RIGHT),INITIAL='_____'                                 00030   
+         DFHMDF LENGTH=1,POS=(5,41),ATTRB=(ASKIP,NORM)                  00028   
+         DFHMDF LENGTH=0017,POS=(6,01),ATTRB=(ASKIP,BRT),              X00021   
+               INITIAL='CORP ENTITY CODE:'                              00022   
+COETCDO  DFHMDF LENGTH=0003,POS=(6,20),ATTRB=(UNPROT,NORM,FSET),JUSTIFYX00029   
+               =(RIGHT),INITIAL='___'                                   00030   
+         DFHMDF LENGTH=1,POS=(6,24),ATTRB=(ASKIP,NORM)                  00028   
+         DFHMDF LENGTH=0003,POS=(7,01),ATTRB=(ASKIP,BRT),INITIAL='FR:'  00021   
+FAMRELO  DFHMDF LENGTH=0002,POS=(7,05),ATTRB=(UNPROT,NORM,FSET),JUSTIFYX00029   
+               =(RIGHT),INITIAL='__'                                    00030   
+         DFHMDF LENGTH=1,POS=(7,08),ATTRB=(ASKIP,NORM)                  00028   
+         DFHMDF LENGTH=0064,POS=(10,08),ATTRB=(ASKIP,BRT),INITIAL='IF CX00017   
+               HANGES APPLY TO ALL SECTIONS, KEY AN \
+               ELD.'                                                    00018   
+         DFHMDF LENGTH=0064,POS=(11,08),ATTRB=(ASKIP,BRT),INITIAL='OTHEX00017   
+               RWISE, KEY IN A SPECIFIC GROUP #, SECT # AND EFF DATE RAX00018   
+               NGE.'                                                    00018   
+         DFHMDF LENGTH=0044,POS=(14,22),ATTRB=(ASKIP,BRT),INITIAL='ALL X00014   
+               SECTIONS    BEGIN VALUES      END VALUES'                00015   
+         DFHMDF LENGTH=0013,POS=(16,01),ATTRB=(ASKIP,BRT),INITIAL='GROUX00021   
+               P NUMBER:'                                               00022   
+GRPNUMB  DFHMDF LENGTH=0009,POS=(16,38),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='_________'                       00030   
+         DFHMDF LENGTH=1,POS=(16,48),ATTRB=(ASKIP,NORM)                 00028   
+GRPNUME  DFHMDF LENGTH=0009,POS=(16,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='_________'                       00030   
+         DFHMDF LENGTH=1,POS=(16,66),ATTRB=(ASKIP,NORM)                 00028   
+         DFHMDF LENGTH=0015,POS=(18,01),ATTRB=(ASKIP,BRT),INITIAL='SECTX00021   
+               ION NUMBER:'                                             00022   
+SECNUMA  DFHMDF LENGTH=0001,POS=(18,28),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='_'                               00030   
+         DFHMDF LENGTH=1,POS=(18,30),ATTRB=(ASKIP,NORM)                 00028   
+SECNUMB  DFHMDF LENGTH=0005,POS=(18,38),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='_____'                           00030   
+         DFHMDF LENGTH=1,POS=(18,44),ATTRB=(ASKIP,NORM)                 00028   
+SECNUME  DFHMDF LENGTH=0005,POS=(18,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='_____'                           00030   
+         DFHMDF LENGTH=1,POS=(18,62),ATTRB=(ASKIP,NORM)                 00028   
+         DFHMDF LENGTH=0019,POS=(20,01),ATTRB=(ASKIP,BRT),INITIAL='ATB X00021   
+               EFFECTIVE DATE:'                                         00022   
+EFFDATB  DFHMDF LENGTH=0010,POS=(20,38),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='__________'                      00030   
+         DFHMDF LENGTH=1,POS=(20,49),ATTRB=(ASKIP,NORM)                 00028   
+EFFDATE  DFHMDF LENGTH=0010,POS=(20,56),ATTRB=(UNPROT,NORM,FSET),JUSTIFX00029   
+               Y=(RIGHT,ZERO),INITIAL='__________'                      00030   
+         DFHMDF LENGTH=1,POS=(20,67),ATTRB=(ASKIP,NORM)                 00028   
+         DFHMDF LENGTH=0012,POS=(21,01),ATTRB=(PROT,BRT,FSET),         X00021   
+               INITIAL='(MM/DD/YYYY)'                                   00022   
+GAGSKEY  DFHMDF LENGTH=0043,POS=(23,18),ATTRB=(PROT,BRT,FSET),         X        
+               INITIAL='FUNCTIONS: PF9:CLEAR  PF10:SAVE && EXECUTE'             
+ERRMSG   DFHMDF LENGTH=79,POS=(24,1),ATTRB=(PROT,BRT)                   00302   
+         DFHMSD TYPE=FINAL                                              00303   
+         END                                                            00304   
+/*                                                                      00305   

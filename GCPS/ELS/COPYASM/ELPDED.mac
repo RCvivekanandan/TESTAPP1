@@ -1,0 +1,56 @@
+**********************************************************************  00001000
+*                 DATA ELEMENT RECORD                                   00002000
+*              ENGLISH LANGUAGE PROTOTYPE                               00003000
+*                                                                       00004000
+*   COPY MEMBER NAME: ELPDED                 MAX LENGTH: 1041           00004106
+**********************************************************************  00004200
+*                                                                       00004300
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                 00004400
+*   *-*         U P D A T E   H I S T O R Y         *-*                 00004500
+*   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*                 00004600
+*                                                                       00004700
+*-CHG-NUM-* *-DATE-* *WHO* *---------DESCRIPTION----------------------  00004800
+*                                                                       00004900
+*   XXXX    02/26/86  DES  ORIGINAL MODULE                              00005000
+*                                                                       00005100
+*                                                                       00005200
+**********************************************************************  00005300
+DEDATELM DS    0CL1041      DATA-ELEMENT                                00005406
+DEPRIKEY DS    0CL11          DE-PRIMARY-KEY                            00005505
+DERECPRF DS    CL8               DE-RECORD-PREFIX                       00005602
+DEELMTNO DS    PL3               DE-ELEMENT-NBR      S9(3)V99           00005700
+DESECKEY DS    0CL83          DE-SECONDARY-NAME-KEY                     00005802
+DERECPRN DS    CL8               DE-RECORD-PREFIX-N                     00005902
+DEELMTNM DS    CL75              DE-ELEMENT-NAME                        00006000
+DEELTFRM DS    CL2            DE-ELEMENT-FORMAT                         00006100
+DEALPHA  EQU   C'A '             DE-ALPHA                               00006201
+DEALPHNM EQU   C'AN'             DE-ALPHANUM                            00006301
+DEDATE   EQU   C'DT'             DE-DATE                                00006401
+DENUMBER EQU   C'N '             DE-NUM                                 00006501
+DEELMTLN DS    PL2            DE-ELEMENT-LENGTH      S9(3)              00006600
+DEFORCMT DS    CL21           DE-FORMAT-COMMENT                         00006700
+DEDELFLG DS    CL1            DE-DELETE-ELEMENT-FLAG                    00006800
+DEDELETE EQU   C'D'              DE-DELETE                              00006901
+DERPRTFL DS    CL1            DE-AUTO-REPRINT-FLAG                      00007000
+DERPRINT EQU   C'Y'              DE-REPRINT                             00007101
+DERECPOS DS    PL3            DE-RECORD-POS           S9(5)             00007200
+DESTRLEN DS    PL2            DE-STORED-LENGTH        S9(3)             00007300
+DESTRDEC DS    PL2            DE-STORED-DECIMALS      S9(3)             00007400
+DESTRFRM DS    CL1            DE-STORED-FORMAT                          00007500
+DEBIN    EQU   C'B'              DE-BIN                                 00007601
+DECHAR   EQU   C'C'              DE-CHAR                                00007701
+DEDISPLY EQU   C'D'              DE-DISPLAY                             00007801
+DEPACKED EQU   C'P'              DE-PACKED                              00007901
+DEHEX    EQU   C'X'              DE-HEX                                 00008001
+DECODFLG DS    CL1            DE-CODES-FLAG                             00008100
+DECODED  EQU   C'Y'               DE-HAS-CODE-VALUES                    00008201
+DECVALCT DS    H              DE-CODE-VALUES-CT       S9(4) COMP        00008302
+DECOBLNM DS    CL30           DE-COBOL-NAME                             00008402
+DEBALNAM DS    CL8            DE-BAL-NAME                               00008502
+DENBRLNS DS    PL2            DE-NBR-DESC-LINES       S9(3)             00008602
+DEDESLIN DS    0CL79          DE-DESC-LINE                              00008700
+DEOCCURS DS    11CL79                                                   00008800
+DELENGTH EQU   *-DEDATELM      LENGTH OF THE RECORD                     00009000
+DEFXRECL EQU   DEDESLIN-DEDATELM   LENGTH OF THE FIXED PORTION          00010004
+DEVBRECL EQU   L'DEDESLIN          LENGTH OF THE VARIABLE PORTION       00020004
+DENOVARS EQU   ((DELENGTH-DEFXRECL)/DEVBRECL)  MAX NUM OF OCCURS        00030004
