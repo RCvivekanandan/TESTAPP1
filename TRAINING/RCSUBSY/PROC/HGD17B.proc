@@ -1,0 +1,13 @@
+//HGD17B   PROC MIDATS='MIDATS(0)',JBN=XX,               PRODUCTION DAY         
+//SCRFILE1 EXEC PGM=IEFBR14                                                     
+//DD1      DD DSN=OPER.CKPT.HGD17B.SR8810,DISP=(MOD,DELETE),UNIT=DISK,          
+//            SPACE=(TRK,0,RLSE)                                                
+//DD2      DD DSN=OPER.CNS.JRNL8810.D&JBN,DISP=(MOD,DELETE),                    
+//            UNIT=(3490E,,DEFER)                                               
+//SR8810A  DD DSN=OPER.CNS.SR8810A,DISP=(,CATLG),UNIT=DISK,                     
+//            SPACE=(CYL,(60,30),RLSE),                                         
+//            DCB=(RECFM=FB,LRECL=130,BLKSIZE=0)                                
+//SR8810B  DD DSN=OPER.CNS.SR8810B,DISP=(,CATLG),UNIT=DISK,                     
+//            SPACE=(CYL,(75,40),RLSE),                                         
+//            DCB=(RECFM=FB,LRECL=130,BLKSIZE=0)                                
+//********* END OF HGD17B  ***********                                          

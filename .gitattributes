@@ -1,0 +1,43 @@
+# .gitattributes must be ASCII (ISO8859-1)
+.gitattributes text zos-working-tree-encoding=ISO8859-1
+
+# ===============================
+# Mainframe source (EBCDIC - ISO8859-1)
+# Git stores as UTF-8 for GitHub readability
+# ===============================
+*.cbl  text zos-working-tree-encoding=ISO8859-1
+*.ctl  text zos-working-tree-encoding=ISO8859-1
+*.cob  text zos-working-tree-encoding=ISO8859-1
+*.cpy  text zos-working-tree-encoding=ISO8859-1
+*.copy text zos-working-tree-encoding=ISO8859-1
+*.jcl  text zos-working-tree-encoding=ISO8859-1
+*.proc text zos-working-tree-encoding=ISO8859-1
+*.rexx text zos-working-tree-encoding=ISO8859-1
+*.asm  text zos-working-tree-encoding=ISO8859-1
+*.pli  text zos-working-tree-encoding=ISO8859-1
+*.bms  text zos-working-tree-encoding=ISO8859-1
+*.mac  text zos-working-tree-encoding=ISO8859-1
+*.bind text zos-working-tree-encoding=ISO8859-1
+*.incl text zos-working-tree-encoding=ISO8859-1
+*.sql  text zos-working-tree-encoding=ISO8859-1
+
+# ===============================
+# Open systems / config (ASCII)
+# ===============================
+*.json       text zos-working-tree-encoding=ISO8859-1
+*.xml        text zos-working-tree-encoding=ISO8859-1
+*.yaml       text zos-working-tree-encoding=ISO8859-1
+*.yml        text zos-working-tree-encoding=ISO8859-1
+*.txt        text zos-working-tree-encoding=ISO8859-1
+*.sh         text zos-working-tree-encoding=ISO8859-1
+*.properties text zos-working-tree-encoding=ISO8859-1
+*.md         text zos-working-tree-encoding=ISO8859-1
+*.groovy     text zos-working-tree-encoding=ISO8859-1
+
+# ===============================
+# Binary (never modify)
+# ===============================
+*.load binary
+*.bin  binary
+*.exe  binary
+*.zip  binary

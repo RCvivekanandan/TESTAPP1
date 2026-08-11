@@ -1,0 +1,11 @@
+//HGD16D   PROC MIDATS='MIDATS(0)',            SCHEDULED PRODUCTION DA          
+//         SYSMSG=J,                              SYSOUT CLASS                  
+//EZDELTA1 EXEC PGM=EZTPA00,REGION=0M,PARM='&DAY'                               
+//STEPLIB  DD DSN=OPER.SHARED.BASE.LOADLIB,DISP=SHR                             
+//         DD DSN=OPER.APPL.LINKLIB,DISP=SHR                                    
+//EZMACRO  DD DSN=OPER.EZ.MACLIB,DISP=SHR                                       
+//SYSPRINT DD SYSOUT=&SYSMSG                                                    
+//SYSOUT   DD SYSOUT=&SYSMSG                                                    
+//ABENDS1  EXEC PGM=OPRABEND,COND=(0,EQ,IDCAMS1)                                
+//*                                                                             
+//************************ END OF HGD16D ******************************         
