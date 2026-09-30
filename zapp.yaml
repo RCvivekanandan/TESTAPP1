@@ -1,0 +1,37 @@
+name: TESTAPP1
+version: 1.0.0
+
+propertyGroups:
+  - name: cobol-local
+    language: cobol
+    libraries:
+      - name: syslib
+        type: local
+        locations:
+          - "**/COPYCBL"
+          - "**/copybook"
+          - "**/copybooks"
+
+profiles:
+  - name: dbb3-userbuild
+    type: dbb
+    settings:
+      application: TESTAPP1
+      command: "/var/dbb3-demo/bin/idz-dbb3.sh -DBB_DAEMON_HOST 127.0.0.1 -DBB_DAEMON_PORT 7381"
+      buildScriptPath: "/RCTEST/dbb-zappbuild/build.groovy"
+      buildScriptArgs:
+        - "--userBuild"
+        - "--sourceDir ${dbbWorkspace}"
+        - "--workDir ${dbbLogDir}"
+        - "--hlq ${dbbHlq}"
+        - "--application ${application}"
+        - "--dependencyFile ${dependencyFile}"
+        - "--verbose"
+      additionalDependencies:
+        - "application-conf"
+        - "properties"
+        - "zapp.yaml"
+      logFilePatterns:
+        - "${buildFile.basename}.log"
+        - "BuildReport.*"
+        - "buildList.txt"

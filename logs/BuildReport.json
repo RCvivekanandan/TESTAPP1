@@ -1,0 +1,115 @@
+{
+  "records": [
+    {
+      "id": "DBB API Version",
+      "type": "VERSION",
+      "version": "3.0.0",
+      "build": "4828",
+      "date": "20-Sep-2024 16:44:55"
+    },
+    {
+      "id": "DBB Build Mode",
+      "type": "BUILD_MODE",
+      "build-mode": "NORMAL"
+    },
+    {
+      "id": "CREATE_PDS_1",
+      "type": "CREATE_PDS",
+      "dataset": "ADCD.DBBTEST.COBOL",
+      "options": "cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library) new catalog",
+      "exists": false
+    },
+    {
+      "id": "CREATE_PDS_2",
+      "type": "CREATE_PDS",
+      "dataset": "ADCD.DBBTEST.COPY",
+      "options": "cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library) new catalog",
+      "exists": false
+    },
+    {
+      "id": "CREATE_PDS_3",
+      "type": "CREATE_PDS",
+      "dataset": "ADCD.DBBTEST.OBJ",
+      "options": "cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library) new catalog",
+      "exists": false
+    },
+    {
+      "id": "CREATE_PDS_4",
+      "type": "CREATE_PDS",
+      "dataset": "ADCD.DBBTEST.DBRM",
+      "options": "cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library) new catalog",
+      "exists": false
+    },
+    {
+      "id": "CREATE_PDS_5",
+      "type": "CREATE_PDS",
+      "dataset": "ADCD.DBBTEST.DCLGEN",
+      "options": "cyl space(1,1) lrecl(80) dsorg(PO) recfm(F,B) dsntype(library) new catalog",
+      "exists": false
+    },
+    {
+      "id": "CREATE_PDS_6",
+      "type": "CREATE_PDS",
+      "dataset": "ADCD.DBBTEST.LOAD",
+      "options": "cyl space(1,1) dsorg(PO) recfm(U) blksize(32760) dsntype(library) new catalog",
+      "exists": false
+    },
+    {
+      "id": "COPY_TO_PDS_1",
+      "type": "COPY_TO_PDS",
+      "source": "/RCTEST/sandbox/Workspace/TESTAPP1/TRAINING/RCSUBSY/BATCB3/HELLO.cbl",
+      "destination": "ADCD.DBBTEST.COBOL(HELLO)",
+      "mode": "TEXT"
+    },
+    {
+      "id": "EXECUTE_1",
+      "type": "EXECUTE",
+      "command": "IGYCRCTL",
+      "options": "LIB",
+      "rc": 0,
+      "file": "TESTAPP1/TRAINING/RCSUBSY/BATCB3/HELLO.cbl",
+      "outputs": [
+        {
+          "dataset": "ADCD.DBBTEST.OBJ(HELLO)"
+        }
+      ],
+      "datasets": [
+        "ADCD.DBBTEST.COBOL(HELLO)"
+      ],
+      "logs": [
+        "/RCTEST/sandbox/Workspace/work/HELLO.log"
+      ]
+    },
+    {
+      "id": "COPY_TO_HFS_1",
+      "type": "COPY_TO_HFS",
+      "source": "SYSPRINT",
+      "destination": "/RCTEST/sandbox/Workspace/work/HELLO.log",
+      "mode": "TEXT"
+    },
+    {
+      "id": "EXECUTE_2",
+      "type": "EXECUTE",
+      "command": "IEWBLINK",
+      "options": "MAP,RENT,COMPAT(PM5)",
+      "rc": 0,
+      "file": "TESTAPP1/TRAINING/RCSUBSY/BATCB3/HELLO.cbl",
+      "outputs": [
+        {
+          "dataset": "ADCD.DBBTEST.LOAD(HELLO)",
+          "deployType": "LOAD"
+        }
+      ],
+      "logs": [
+        "/RCTEST/sandbox/Workspace/work/HELLO.log"
+      ]
+    },
+    {
+      "id": "COPY_TO_HFS_2",
+      "type": "COPY_TO_HFS",
+      "source": "SYSPRINT",
+      "destination": "/RCTEST/sandbox/Workspace/work/HELLO.log",
+      "mode": "TEXT"
+    }
+  ]
+}
