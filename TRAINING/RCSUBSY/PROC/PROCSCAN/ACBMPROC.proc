@@ -1,0 +1,15 @@
+//HGD16D   PROC MIDATS='MIDATS(0)',            SCHEDULED PRODUCTION DA          
+//         SYSMSG=J,                              SYSOUT CLASS                  
+//EZDELTA1 EXEC PGM=EZTPA00,REGION=0M,PARM='&DAY'                               
+//IDCAMS1 EXEC PGM=IDCAMS,REGION=1024K                                          
+//SYSPRINT  DD SYSOUT=&SYSMSG                                                   
+//INFILE    DD DISP=SHR,DSN=ONL14V.NATLACT.HB2SCCFS                             
+//OUTFILE   DD DSN=OPER.HB2SCCFS.BACKUP(+1),                                    
+//             DISP=(,CATLG,DELETE),UNIT=PROD,                                  
+//             SPACE=(CYL,(50,10),RLSE),                                        
+//             DCB=(OPER.DSCB0,RECFM=FB,BLKSIZE=27920,LRECL=080)                
+//SYSIN     DD DSN=OPER.VSAM.CONTROL(REPRO),DISP=SHR                            
+//*                                                                             
+//ABENDS1  EXEC PGM=OPRABEND,COND=(0,EQ,IDCAMS1)                                
+//*                                                                             
+//************************ END OF HGD16D ******************************         
